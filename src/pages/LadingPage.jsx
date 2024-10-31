@@ -4,7 +4,7 @@ const LadingPage = () => {
 
   return (
     <div>
-      
+
     </div>
   )
 }
