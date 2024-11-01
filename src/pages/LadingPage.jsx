@@ -1,11 +1,54 @@
 
+import Wine from "../components/common/Wine.jsx"
+
+import logoIMG from "../assets/img/logo.png"
 
 const LadingPage = () => {
 
-  return (
-    <div>
 
-    </div>
+  return (
+    <main className="bg-primary">
+
+      <section className="h-screen relative">
+        <header className=" h-16">
+          {/* Cambio de idioma */}
+
+          {/* Link Autentificarse */}
+        </header>
+
+        <div className="absolute right-1/2 translate-x-1/2 top-1/2 -translate-y-1/2 ">
+          <img className="w-80" src={logoIMG} alt="Logo" />
+
+          {/*Titulo h1 */}
+        </div>
+        
+
+        <div className="absolute left-20 top-1/2 -translate-y-1/2 w-2/6 h-5/6 ">
+          <div className="absolute right-0">
+            <Wine idWine={1} invested={true}/>
+          </div>
+          <div className="absolute top-1/2 -translate-y-1/2">
+            <Wine idWine={2} invested={true}/>
+          </div>
+          <div className="absolute right-0 bottom-0">
+            <Wine idWine={3} invested={true}/>
+          </div>
+        </div>
+        <div className="absolute right-20 top-1/2 -translate-y-1/2 w-2/6 h-5/6 ">
+          <div>
+            <Wine idWine={4} invested={false}/>
+          </div>
+          <div className="absolute right-0 top-1/2 -translate-y-1/2">
+            <Wine idWine={5} invested={false}/>
+          </div>
+          <div className="absolute bottom-0">
+            <Wine idWine={6} invested={false}/>
+          </div>
+        </div>
+
+
+      </section>
+    </main>
   )
 }
 

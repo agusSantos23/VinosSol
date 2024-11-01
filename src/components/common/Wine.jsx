@@ -28,7 +28,7 @@ const Wine = ({idWine, invested, dark = false}) => {
 
     return (
       <div 
-        className="relative w-48 h-56 cursor-pointer"
+        className="relative w-52 h-56 cursor-pointer"
         onMouseEnter={() => setHovered(true)} // Activa hovered al pasar el raton
         onMouseLeave={() => setHovered(false)} // Desactiva hovered al quitar el raton
       >
@@ -90,9 +90,9 @@ const Wine = ({idWine, invested, dark = false}) => {
             </g>
           </svg>
 
-          <div className={`absolute  ${invested ? "md:left-12" : "md:right-14"} md:bottom-0 md:w-24 md:h-5 bg-black rounded-full opacity-70 blur-md ${hovered && "animate-swingingShadow"}`}></div>
+          <div className={`absolute  ${invested ? "md:left-8" : "md:right-18"} md:bottom-0 md:w-24 md:h-5 bg-black rounded-full opacity-70 blur-md ${hovered && "animate-swingingShadow"}`}></div>
 
-          <div className={`absolute  ${invested ? "md:left-1" : "md:right-1"} flex-col text-center text-xl  font-lora font-bold`}>
+          <div className={`absolute  ${invested ? "md:left-1" : "md:right-1"} flex-col px-3 py-1 rounded-md text-center text-xl ${hovered && "bg-selected text-primary"} font-lora font-bold duration-200 ease-in`}>
             {
               // Divide el texto en letras individuales, asignando un key único a cada div
               text.split("").map((letter, index) => <div key={index}>{letter}</div>)
@@ -100,7 +100,6 @@ const Wine = ({idWine, invested, dark = false}) => {
           </div>
         </Link>
       </div>
-
     )
 
   }else{
