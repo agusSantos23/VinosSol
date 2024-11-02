@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+/** @type {import("tailwindcss").Config} */
 export default {
   content: [
     "./index.html",
@@ -9,15 +9,20 @@ export default {
       colors: {
         "primary": "#ecece5",
         "secondary": "#1c1c1c",
-        "tertiary": "#dfded4",
+        "third": "#dfded4",
         "selected": "#00796b"
       },
       fontFamily: { 
         lora: ["Lora", "sans-serif"], 
+        fire: ["Playfair", "sans-serif"]
       }, 
       animation: {
-        swinging: "swinging 0.7s ease-in-out",
-        swingingShadow: "swingingShadow 0.7s ease-in-out",
+        swinging: "swinging 0.7s ease-in-out forwards",
+        swingingShadow: "swingingShadow 0.7s ease-in-out forwards",
+        opacity: "opacity 2s ease-in forwards",
+        opacityDelay1: "opacity 1s ease 1s forwards",
+        opacityDelay2: "opacity 1s ease 1.5s forwards",
+        opacityDelay3: "opacity 1s ease 2s forwards",
       },
       keyframes: {
         swinging: {
@@ -30,8 +35,11 @@ export default {
           "50%": { transform: "translateX(2px)" },
           "75%": { transform: "translateX(-2px)" },
         },
+        opacity: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
       },
-      
     },
   },
   plugins: [],

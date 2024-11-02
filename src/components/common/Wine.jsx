@@ -14,30 +14,29 @@ const Wine = ({idWine, invested, dark = false}) => {
   const [hovered, setHovered] = useState(false) // Activa el estado hovered al hacer hover sobre el componente avanzado
 
   const wineTypes = {// Define los tipos de vino, cada uno con un color y texto asociado segun su idWine
-    1: { color: "#6b033b", text: "Tinto" },
-    2: { color: "#e8e0ac", text: "Blanco" },
-    3: { color: "#e3a6b7", text: "Rosado" },
-    4: { color: "#cc711d", text: "Generoso" },
-    5: { color: "#4f073e", text: "Oporto" },
-    6: { color: "#690404", text: "Vermu" },
+    1: { color: "#6b033b", text: "Tinto", delay: "animate-opacityDelay1" },
+    2: { color: "#e8e0ac", text: "Blanco", delay: "animate-opacityDelay2" },
+    3: { color: "#e3a6b7", text: "Rosado", delay: "animate-opacityDelay3" },
+    4: { color: "#cc711d", text: "Generoso", delay: "animate-opacityDelay1" },
+    5: { color: "#4f073e", text: "Oporto", delay: "animate-opacityDelay2" },
+    6: { color: "#690404", text: "Vermu", delay: "animate-opacityDelay3" },
   }
-  const { color, text } = wineTypes[idWine]  // Extrae el color y texto del tipo de vino correspondiente al idWine proporcionado
+  const { color, text, delay } = wineTypes[idWine]  // Extrae el color y texto del tipo de vino correspondiente al idWine proporcionado
 
 
   if (invested !== undefined) {// rederizara el componenete avanzado o simple
 
     return (
       <div 
-        className="relative w-52 h-56 cursor-pointer"
+        className={`relative w-52 h-60 cursor-pointer opacity-0 ${delay}`}
         onMouseEnter={() => setHovered(true)} // Activa hovered al pasar el raton
         onMouseLeave={() => setHovered(false)} // Desactiva hovered al quitar el raton
       >
         <Link to="#"> 
           <svg
-            className={`absolute  ${invested ? "right-0" : "left-0"}  ${hovered && "animate-swinging"}`}
+            className={`absolute ${invested ? "right-0" : "left-0"} ${hovered && "animate-swinging" }  `}
             width="176px"
             viewBox="0 0 1280 1280"
-            preserveAspectRatio="xMidYMid"
           >
             <g
               transform="matrix(0.1,0,0,-0.1,0,1280)"
@@ -90,12 +89,17 @@ const Wine = ({idWine, invested, dark = false}) => {
             </g>
           </svg>
 
-          <div className={`absolute  ${invested ? "md:left-8" : "md:right-18"} md:bottom-0 md:w-24 md:h-5 bg-black rounded-full opacity-70 blur-md ${hovered && "animate-swingingShadow"}`}></div>
+          <div className={`absolute  ${invested ? "md:left-8" : "md:right-18"} md:bottom-0 md:w-24 md:h-5 bg-black rounded-full blur-md ${hovered && "animate-swingingShadow"} `}></div>
 
-          <div className={`absolute  ${invested ? "md:left-1" : "md:right-1"} flex-col px-3 py-1 rounded-md text-center text-xl ${hovered && "bg-selected text-primary"} font-lora font-bold duration-200 ease-in`}>
+          <div className={`absolute  ${invested ? "md:left-0" : "md:right-0"} px-3 py-1 rounded-md text-center text-xl text-secondary ${hovered && "bg-selected text-third"} font-lora font-bold duration-200 ease-in`}>
             {
               // Divide el texto en letras individuales, asignando un key único a cada div
-              text.split("").map((letter, index) => <div key={index}>{letter}</div>)
+              text.split("").map((letter, index) => (
+                <div 
+                  key={index}
+                >{letter}</div>
+            
+              ))
             }
           </div>
         </Link>

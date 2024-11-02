@@ -16,14 +16,14 @@ const LadingPage = () => {
           {/* Link Autentificarse */}
         </header>
 
-        <div className="absolute right-1/2 translate-x-1/2 top-1/2 -translate-y-1/2 ">
-          <img className="w-80" src={logoIMG} alt="Logo" />
+        <div className="absolute right-1/2 translate-x-1/2 top-1/2 -translate-y-1/2 flex flex-col items-center gap-5">
+          <img className="w-72 animate-opacity opacity-0" src={logoIMG} alt="Logo" />
 
-          {/*Titulo h1 */}
+          <h1 className="text-4xl font-fire text-secondary animate-opacity opacity-0">Vinos Del Sol</h1>
         </div>
         
 
-        <div className="absolute left-20 top-1/2 -translate-y-1/2 w-2/6 h-5/6 ">
+        <div className="absolute left-10 top-1/2 -translate-y-1/2 w-2/6 h-5/6 ">
           <div className="absolute right-0">
             <Wine idWine={1} invested={true}/>
           </div>
@@ -34,7 +34,8 @@ const LadingPage = () => {
             <Wine idWine={3} invested={true}/>
           </div>
         </div>
-        <div className="absolute right-20 top-1/2 -translate-y-1/2 w-2/6 h-5/6 ">
+
+        <div className="absolute right-10 top-1/2 -translate-y-1/2 w-2/6 h-5/6 ">
           <div>
             <Wine idWine={4} invested={false}/>
           </div>
