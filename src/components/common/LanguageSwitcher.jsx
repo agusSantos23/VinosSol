@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next"
+import Button from "./Button"
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation()
@@ -10,9 +11,15 @@ const LanguageSwitcher = () => {
   
 
   return (
-    <div>
-      <button onClick={() => changeLanguage("es")}>ES</button>
-      <button onClick={() => changeLanguage("en")}>EN</button>
+    <div className="w-32 flex justify-between">
+      <Button onClick={() => changeLanguage("es")}>
+        ES
+      </Button>
+
+      <Button onClick={() => changeLanguage("en")}>
+        EN
+      </Button>
+
     </div>
   )
 }
