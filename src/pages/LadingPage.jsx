@@ -1,18 +1,17 @@
-
 import Wine from "../components/common/Wine.jsx"
 
 import logoIMG from "../assets/img/logo.png"
+import LanguageSwitcher from "../components/common/LanguageSwitcher.jsx"
 
 const LadingPage = () => {
-
 
   return (
     <main className="bg-primary dark:bg-secondary">
 
       <section className="h-screen relative">
         <header className=" h-16">
-          {/* Cambio de idioma */}
-
+          <LanguageSwitcher />
+          
           {/* Link Autentificarse */}
         </header>
 
