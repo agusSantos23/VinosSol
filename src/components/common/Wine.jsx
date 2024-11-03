@@ -2,18 +2,21 @@ import PropTypes from "prop-types" // Importa PropTypes para definir tipos de pr
 import { useState } from "react" // Importa useState, un hook para manejar el estado local en el componente
 import { Link } from "react-router-dom" // Importa Link para crear enlaces de navegación en la aplicación web
 
-const Wine = ({idWine, invested, dark = false}) => {
+const Wine = ({idWine, invested}) => {
   /*
     -Parametros
     idWine: Clasificacion del tipo de vino
-    dark: Activa el modo oscuro
     invested: Define si se usa la version avanzada (invertida segun su valor)
   */
 
-  const fillColor = dark ? "#fff" : "#000" //Asigna el color del svg 
+  //Consulta al navegador si el tema del navegador es oscuro y devuelve un booleano
+  const dark = window.matchMedia("(prefers-color-scheme: dark)").matches 
+  
+  const fillColor = dark ? "#dfded4" : "#111" //Asigna el color del svg 
   const [hovered, setHovered] = useState(false) // Activa el estado hovered al hacer hover sobre el componente avanzado
 
-  const wineTypes = {// Define los tipos de vino, cada uno con un color y texto asociado segun su idWine
+  // Define los tipos de vino, cada uno con un color y texto asociado segun su idWine
+  const wineTypes = {
     1: { color: "#6b033b", text: "Tinto", delay: "animate-opacityDelay1" },
     2: { color: "#e8e0ac", text: "Blanco", delay: "animate-opacityDelay2" },
     3: { color: "#e3a6b7", text: "Rosado", delay: "animate-opacityDelay3" },
@@ -22,7 +25,6 @@ const Wine = ({idWine, invested, dark = false}) => {
     6: { color: "#690404", text: "Vermu", delay: "animate-opacityDelay3" },
   }
   const { color, text, delay } = wineTypes[idWine]  // Extrae el color y texto del tipo de vino correspondiente al idWine proporcionado
-
 
   if (invested !== undefined) {// rederizara el componenete avanzado o simple
 
@@ -89,16 +91,15 @@ const Wine = ({idWine, invested, dark = false}) => {
             </g>
           </svg>
 
-          <div className={`absolute  ${invested ? "md:left-8" : "md:right-18"} md:bottom-0 md:w-24 md:h-5 bg-black rounded-full blur-md ${hovered && "animate-swingingShadow"} `}></div>
+          <div className={`absolute  ${invested ? "md:left-8" : "md:right-18"} md:bottom-0 md:w-24 md:h-5 bg-secondary dark:bg-primary rounded-full blur-md ${hovered && "animate-swingingShadow"} `}></div>
 
-          <div className={`absolute  ${invested ? "md:left-0" : "md:right-0"} px-3 py-1 rounded-md text-center text-xl text-secondary ${hovered && "bg-selected text-third"} font-lora font-bold duration-200 ease-in`}>
+          <div className={`absolute  ${invested ? "md:left-0" : "md:right-0"} px-3 py-1 rounded-md text-center text-xl text-secondary dark:text-primary ${hovered && "bg-selected text-third"} font-lora font-bold duration-200 ease-in`}>
             {
               // Divide el texto en letras individuales, asignando un key único a cada div
               text.split("").map((letter, index) => (
                 <div 
                   key={index}
                 >{letter}</div>
-            
               ))
             }
           </div>
@@ -169,7 +170,6 @@ const Wine = ({idWine, invested, dark = false}) => {
 Wine.propTypes = {
   idWine: PropTypes.number.isRequired, // numero obligatorio
   invested: PropTypes.bool, // booleano
-  dark: PropTypes.bool, // booleano
 }
 
 export default Wine

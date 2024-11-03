@@ -7,7 +7,7 @@ const LadingPage = () => {
 
 
   return (
-    <main className="bg-primary">
+    <main className="bg-primary dark:bg-secondary">
 
       <section className="h-screen relative">
         <header className=" h-16">
@@ -19,7 +19,7 @@ const LadingPage = () => {
         <div className="absolute right-1/2 translate-x-1/2 top-1/2 -translate-y-1/2 flex flex-col items-center gap-5">
           <img className="w-72 animate-opacity opacity-0" src={logoIMG} alt="Logo" />
 
-          <h1 className="text-4xl font-fire text-secondary animate-opacity opacity-0">Vinos Del Sol</h1>
+          <h1 className="text-4xl font-fire text-secondary dark:text-primary animate-opacity opacity-0">Vinos Del Sol</h1>
         </div>
         
 
@@ -46,7 +46,6 @@ const LadingPage = () => {
             <Wine idWine={6} invested={false}/>
           </div>
         </div>
-
 
       </section>
     </main>
