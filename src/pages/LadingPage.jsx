@@ -1,19 +1,28 @@
 
 import LanguageSwitcher from "../components/common/LanguageSwitcher.jsx"
 import Wine from "../components/common/Wine.jsx"
+import BtnAuth from "../components/common/BtnAuth.jsx"
 import logoIMG from "../assets/img/logo.png"
 
 
+
 const LadingPage = () => {
+
+
 
   return (
     <main className="bg-primary dark:bg-secondary">
 
       <section className="h-screen relative">
-        <header className="h-16 px-7 pt-5">
-          <LanguageSwitcher />
+        <header className="h-16 px-7 pt-5 flex justify-between">
+          <div className="opacity-0 animate-opacityDelay1 ">
+            <LanguageSwitcher />
+          </div>
+          <div className="opacity-0 animate-opacityDelay1 ">
+            <BtnAuth isLogin={true}/>
+          </div>
 
-          {/* btn Autentificarse*/}
+          
         </header>
 
         <div className="absolute right-1/2 translate-x-1/2 top-1/2 -translate-y-1/2 flex flex-col items-center gap-5">
