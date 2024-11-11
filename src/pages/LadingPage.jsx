@@ -1,4 +1,4 @@
-import WineDescription from '../components/sections/WineDescription'
+import WineDescription from '../components/sections/WineDescription.jsx'
 
 const LadingPage = () => {
 
