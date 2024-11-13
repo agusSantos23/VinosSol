@@ -72,7 +72,7 @@ const WineDescription = ({ wine }) => {
   return (
     
 
-    <section className={"flex justify-center items-center h-screen w-screen p-14 " + style}>
+    <section className={"flex justify-center items-center p-12 " + style}>
 
       <img src={img} alt={alt} className="w-1/3 h-auto rounded-md" />
 
@@ -80,19 +80,18 @@ const WineDescription = ({ wine }) => {
 
         <h1 className="text-center text-4xl font-bold">{title}</h1>
 
-        <div className="mb-10 text-lg">
-          <p className="w-2/3 ml-10">{desc1}</p>
-          <p className="w-2/3 mt-16 ml-72">{desc2}</p>
+        <div className="relative w-full h-72 my-10 text-lg">
+
+          <p className="absolute left-12 w-3/4 text-left">{desc1}</p>
+          <p className="absolute right-0 bottom-0 w-3/4 text-right">{desc2}</p>
+
         </div>
         
-        <button className="w-60 text-xl font-bold border-2 py-3 px-10 rounded hover:bg-selected duration-150 ease-in">Comprar</button>
+        <button className="w-60 text-xl font-bold border-2 py-3 px-10 rounded hover:bg-selected duration-200 ease-in">Comprar</button>
 
       </div>
 
     </section>
-
-
-
   )
 }
 

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types" // Importa PropTypes para definir tipos de propiedades esperadas en el componente
-import { useState } from "react" // Importa useState, un hook para manejar el estado local en el componente
+import { useState, useEffect } from "react" // Importa useState, un hook para manejar el estado local en el componente
 import { Link } from "react-router-dom" // Importa Link para crear enlaces de navegación en la aplicación web
 
 const Wine = ({idWine, invested}) => {
@@ -10,9 +10,25 @@ const Wine = ({idWine, invested}) => {
   */
 
   //Consulta al navegador si el tema del navegador es oscuro y devuelve un booleano
-  const dark = window.matchMedia("(prefers-color-scheme: dark)").matches 
+  const [isDarkMode, setIsDarkMode] = useState(window.matchMedia("(prefers-color-scheme: dark)").matches)
+
+  useEffect(() => {
+    //Nos permite escuchar cambios en la preferencia del tema del navegador
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+    const handleChange = (event) => setIsDarkMode(event.matches)
+    
+    //Nuestra funcion se ejecute automaticamente cuando el usuario cambie de tema
+    mediaQuery.onchange = handleChange;
+
+    // Eliminar el listener cuando el componente se desmonte
+    return () => {
+      mediaQuery.onchange = null;
+    };
+  }, []);
+
   
-  const fillColor = dark ? "#dfded4" : "#111" //Asigna el color del svg 
+  const fillColor = isDarkMode ? "#dfded4" : "#111" //Asigna el color del svg 
   const [hovered, setHovered] = useState(false) // Activa el estado hovered al hacer hover sobre el componente avanzado
 
   // Define los tipos de vino, cada uno con un color y texto asociado segun su idWine

@@ -11,7 +11,7 @@ export default {
         "primary": "#ecece5",
         "secondary": "#1c1c1c",
         "third": "#dfded4",
-        "quaternary": "#323232",
+        "quaternary": "#2b2b2b",
         "selected": "#00796b"
       },
       fontFamily: { 
