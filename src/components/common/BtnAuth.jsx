@@ -1,20 +1,23 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import Button from "./Button"
+import { useTranslation } from "react-i18next"
 
 
-const btnAuth = ({isLogin = false}) => {
+const BtnAuth = ({isLogin = false}) => {
+  const { t } = useTranslation()
+
 
   return (
     <Button>
       <Link to={`/auth?section=${isLogin ?"Login":"Register"}`}>
-        Autentificarse
+        {t("ladingPage.Authenticate")}
       </Link>
     </Button>
   )
 }
 
-btnAuth.propTypes = {
+BtnAuth.propTypes = {
   isLogin: PropTypes.bool
 }
-export default btnAuth
+export default BtnAuth

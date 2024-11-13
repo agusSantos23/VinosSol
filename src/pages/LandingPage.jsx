@@ -4,14 +4,10 @@ import Wine from "../components/common/Wine.jsx"
 import BtnAuth from "../components/common/BtnAuth.jsx"
 import WineDescription from '../components/sections/WineDescription.jsx'
 
-
 import logoIMG from "../assets/img/logo.png"
 
 
-
 const LadingPage = () => {
-
-
 
   return (
     <main className="bg-primary dark:bg-secondary">
@@ -23,9 +19,7 @@ const LadingPage = () => {
           </div>
           <div className="opacity-0 animate-opacityDelay1 ">
             <BtnAuth isLogin={true}/>
-          </div>
-
-          
+          </div>         
         </header>
 
         <div className="absolute right-1/2 translate-x-1/2 top-1/2 -translate-y-1/2 flex flex-col items-center gap-5">
@@ -57,6 +51,23 @@ const LadingPage = () => {
             <Wine idWine={6} invested={false}/>
           </div>
         </div>
+
+        <div className="absolute left-1/2 translate-x-[-50%] bottom-10 animate-opacity">
+          <svg 
+            width="50px"
+            height="50px" 
+            className="stroke-secondary dark:stroke-primary animate-bounce"
+            viewBox="0 0 24 24">
+            <path 
+              fill="none" 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              strokeWidth="2" 
+              d="M12 7v10m0 0l4-4m-4 4l-4-4" 
+            />
+          </svg>
+        </div>
+
 
       </section>
 

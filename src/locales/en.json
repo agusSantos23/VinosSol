@@ -1,3 +1,14 @@
 {
-  
+  "ladingPage":{
+    "Authenticate": "Authenticate",
+    "tinto":{
+      "descOne": "Red wine is different from other wines because it is fermented with the skins of the grapes, which gives it its dark color and tannins. This makes it more robust and with a more complex flavor than white wine, which is made only from the juice of the grapes.",
+      "descTwo": "Unlike rosé wine, which is also made from red grapes, red wine has a higher concentration of flavour and body due to the prolonged fermentation on the skins. This makes it ideal for pairing with heartier dishes such as red meats."
+    },
+    "blanco":{
+      "descOne": "",
+      "descTwo": ""
+    },
+    "buttonBuy": "Buy"
+  }
 }

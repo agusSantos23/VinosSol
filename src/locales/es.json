@@ -1,3 +1,16 @@
 {
-  
+  "ladingPage":{
+    "Authenticate": "Autentificarse",
+    "tinto":{
+      "alt": "Red Wine",
+      "descOne": "El vino tinto se diferencia de otros vinos porque se fermenta con las pieles de las uvas, lo que le da su color oscuro y taninos. Esto lo hace más robusto y con un sabor más complejo que el vino blanco, que se hace solo con el jugo de las uvas.",
+      "descTwo": "A diferencia del vino rosado, que también se elabora con uvas rojas, el tinto tiene una mayor concentración de sabor y cuerpo debido a la fermentación prolongada con las pieles. Esto lo hace ideal para maridar con platos más fuertes como carnes rojas."
+    },
+    "blanco":{
+      "alt": "White Wine",
+      "descOne": "",
+      "descTwo": ""
+    },
+    "buttonBuy": "Comprar"
+  }
 }

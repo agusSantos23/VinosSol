@@ -1,96 +1,85 @@
 import PropTypes from "prop-types"
+import { useTranslation } from "react-i18next"
 
 const WineDescription = ({ wine }) => {
 
+  const { t } = useTranslation()
+
   let img
-  let alt
   let title
-  let desc1
-  let desc2
+  let descOne
+  let descTwo
   let style
 
   switch (wine) {
     case 1:
       img =  "/src/assets/img/redWine.png"
-      alt = "redWine"
-      title = "Algo rojo"
-      desc1 = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui cumque illum facere blanditiis. Nesciunt perferendis distinctio voluptatum dolore, molestias dicta, adipisci quos, maiores tempore amet fugit optio expedita minima velit."
-      desc2 = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit hic commodi magnam itaque, accusamus labore a id cupiditate tenetur impedit dolorem. Cupiditate modi voluptatem soluta ad ipsum corporis maiores a!"
+      title = "Tinto"
+      descOne = "ladingPage.tinto.descOne"
+      descTwo = "ladingPage.tinto.descTwo"
       style = "bg-secondary"
       break
 
     case 2:
       img =  "/src/assets/img/whiteWine.png"
-      alt = "whiteWine"
       title = "Algo azul"
-      desc1 = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui cumque illum facere blanditiis. Nesciunt perferendis distinctio voluptatum dolore, molestias dicta, adipisci quos, maiores tempore amet fugit optio expedita minima velit."
-      desc2 = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit hic commodi magnam itaque, accusamus labore a id cupiditate tenetur impedit dolorem. Cupiditate modi voluptatem soluta ad ipsum corporis maiores a!"
+      descOne = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui cumque illum facere blanditiis. Nesciunt perferendis distinctio voluptatum dolore, molestias dicta, adipisci quos, maiores tempore amet fugit optio expedita minima velit."
+      descTwo = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit hic commodi magnam itaque, accusamus labore a id cupiditate tenetur impedit dolorem. Cupiditate modi voluptatem soluta ad ipsum corporis maiores a!"
       style = "bg-quaternary"
       break
 
     case 3:
       img =  "/src/assets/img/roseWine.png"
-      alt = "roseWine"
       title = "Algo verde"
-      desc1 = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui cumque illum facere blanditiis. Nesciunt perferendis distinctio voluptatum dolore, molestias dicta, adipisci quos, maiores tempore amet fugit optio expedita minima velit."
-      desc2 = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit hic commodi magnam itaque, accusamus labore a id cupiditate tenetur impedit dolorem. Cupiditate modi voluptatem soluta ad ipsum corporis maiores a!"
+      descOne = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui cumque illum facere blanditiis. Nesciunt perferendis distinctio voluptatum dolore, molestias dicta, adipisci quos, maiores tempore amet fugit optio expedita minima velit."
+      descTwo = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit hic commodi magnam itaque, accusamus labore a id cupiditate tenetur impedit dolorem. Cupiditate modi voluptatem soluta ad ipsum corporis maiores a!"
       style = "bg-secondary"
       break
 
     case 4:
       img =  "/src/assets/img/generosoWine.png"
-      alt = "generosoWine"
       title = "Algo naranja"
-      desc1 = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui cumque illum facere blanditiis. Nesciunt perferendis distinctio voluptatum dolore, molestias dicta, adipisci quos, maiores tempore amet fugit optio expedita minima velit."
-      desc2 = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit hic commodi magnam itaque, accusamus labore a id cupiditate tenetur impedit dolorem. Cupiditate modi voluptatem soluta ad ipsum corporis maiores a!"
+      descOne = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui cumque illum facere blanditiis. Nesciunt perferendis distinctio voluptatum dolore, molestias dicta, adipisci quos, maiores tempore amet fugit optio expedita minima velit."
+      descTwo = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit hic commodi magnam itaque, accusamus labore a id cupiditate tenetur impedit dolorem. Cupiditate modi voluptatem soluta ad ipsum corporis maiores a!"
       style = "bg-quaternary"
       break
 
     case 5:
       img =  "/src/assets/img/oportoWine.png"
-      alt = "oportoWine"
       title = "Algo amarillo"
-      desc1 = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui cumque illum facere blanditiis. Nesciunt perferendis distinctio voluptatum dolore, molestias dicta, adipisci quos, maiores tempore amet fugit optio expedita minima velit."
-      desc2 = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit hic commodi magnam itaque, accusamus labore a id cupiditate tenetur impedit dolorem. Cupiditate modi voluptatem soluta ad ipsum corporis maiores a!"
+      descOne = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui cumque illum facere blanditiis. Nesciunt perferendis distinctio voluptatum dolore, molestias dicta, adipisci quos, maiores tempore amet fugit optio expedita minima velit."
+      descTwo = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit hic commodi magnam itaque, accusamus labore a id cupiditate tenetur impedit dolorem. Cupiditate modi voluptatem soluta ad ipsum corporis maiores a!"
       style = "bg-secondary"
       break
 
     case 6:
       img =  "/src/assets/img/vermuWine.png"
-      alt = "vermuWine"
       title = "Algo violeta"
-      desc1 = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui cumque illum facere blanditiis. Nesciunt perferendis distinctio voluptatum dolore, molestias dicta, adipisci quos, maiores tempore amet fugit optio expedita minima velit."
-      desc2 = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit hic commodi magnam itaque, accusamus labore a id cupiditate tenetur impedit dolorem. Cupiditate modi voluptatem soluta ad ipsum corporis maiores a!"
+      descOne = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui cumque illum facere blanditiis. Nesciunt perferendis distinctio voluptatum dolore, molestias dicta, adipisci quos, maiores tempore amet fugit optio expedita minima velit."
+      descTwo = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit hic commodi magnam itaque, accusamus labore a id cupiditate tenetur impedit dolorem. Cupiditate modi voluptatem soluta ad ipsum corporis maiores a!"
       style = "bg-quaternary"
-      break
-
-    default:
       break
   }
 
-
   return (
     
+    <section className={"h-screen flex justify-between items-center p-12 font-thin " + style}>
 
-    <section className={"flex justify-center items-center p-12 " + style}>
+      <img src={img} alt={title} className="w-1/3 h-auto rounded-md" />
 
-      <img src={img} alt={alt} className="w-1/3 h-auto rounded-md" />
+      <div className="w-3/5 h-5/6 flex flex-col justify-between items-center text-center text-white">
 
-      <div className="w-4/6 h-5/6 flex flex-col justify-between items-center text-center text-white">
+        <h1 className="text-center text-5xl font-bold font-fire">{title}</h1>
 
-        <h1 className="text-center text-4xl font-bold">{title}</h1>
+        <div className="relative w-full h-64 mb-10 text-lg">
 
-        <div className="relative w-full h-72 my-10 text-lg">
-
-          <p className="absolute left-12 w-3/4 text-left">{desc1}</p>
-          <p className="absolute right-0 bottom-0 w-3/4 text-right">{desc2}</p>
+          <p className="absolute left-0 w-4/6 text-pretty text-left">{t(descOne)}</p>
+          <p className="absolute right-7 bottom-0 w-4/6 text-pretty text-right">{t(descTwo)}</p>
 
         </div>
         
-        <button className="w-60 text-xl font-bold border-2 py-3 px-10 rounded hover:bg-selected duration-200 ease-in">Comprar</button>
-
+        <button className="w-60 text-xl font-bold border-2 py-3 px-10 rounded hover:bg-selected shadow-md shadow-gray-400 duration-200 ease-in">{t("ladingPage.buttonBuy")}</button>
       </div>
-
     </section>
   )
 }

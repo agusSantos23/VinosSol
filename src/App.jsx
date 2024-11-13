@@ -1,5 +1,5 @@
 import {  BrowserRouter as Router, Routes, Route} from "react-router-dom"
-import LadingPage from "./pages/LadingPage.jsx"
+import LandingPage from "./pages/LandingPage.jsx"
 import Auth from "./pages/Auth.jsx"
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<LadingPage />} />
+        <Route path="/" element={<LandingPage />} />
         <Route path="/auth" element={<Auth />} />
 
 
