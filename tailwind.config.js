@@ -1,4 +1,5 @@
 /** @type {import("tailwindcss").Config} */
+
 export default {
   content: [
     "./index.html",
@@ -10,6 +11,7 @@ export default {
         "primary": "#ecece5",
         "secondary": "#1c1c1c",
         "third": "#dfded4",
+        "quaternary": "#323232",
         "selected": "#00796b"
       },
       fontFamily: { 

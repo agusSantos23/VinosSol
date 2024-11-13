@@ -2,6 +2,9 @@
 import LanguageSwitcher from "../components/common/LanguageSwitcher.jsx"
 import Wine from "../components/common/Wine.jsx"
 import BtnAuth from "../components/common/BtnAuth.jsx"
+import WineDescription from '../components/sections/WineDescription.jsx'
+
+
 import logoIMG from "../assets/img/logo.png"
 
 
@@ -56,7 +59,15 @@ const LadingPage = () => {
         </div>
 
       </section>
+
+      <WineDescription wine={1} />
+      <WineDescription wine={2} />
+      <WineDescription wine={3} />
+      <WineDescription wine={4} />
+      <WineDescription wine={5} />
+      <WineDescription wine={6} />
     </main>
+
   )
 }
 
