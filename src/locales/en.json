@@ -1,14 +1,40 @@
 {
-  "ladingPage":{
+  "landingPage":{
     "Authenticate": "Authenticate",
     "tinto":{
+      "h2": "Red",
       "descOne": "Red wine is different from other wines because it is fermented with the skins of the grapes, which gives it its dark color and tannins. This makes it more robust and with a more complex flavor than white wine, which is made only from the juice of the grapes.",
       "descTwo": "Unlike rosé wine, which is also made from red grapes, red wine has a higher concentration of flavour and body due to the prolonged fermentation on the skins. This makes it ideal for pairing with heartier dishes such as red meats."
     },
     "blanco":{
-      "descOne": "",
-      "descTwo": ""
+      "h2": "White",
+      "descOne": "White wine is made primarily from the juice of white grapes, which gives it its light color and fresh, light flavor profile. Unlike red wine, white wine tends to be more fruity, with floral and citrus notes that make it very attractive.",
+      "descTwo": "This type of wine is ideal for pairing with lighter dishes, such as fish and seafood, where its freshness and acidity complement the flavors without overwhelming them. Additionally, white wine can be enjoyed both young and aged, depending on the grape variety and winemaking style."
     },
+    "rosado":{
+      "h2": "Rose",
+      "descOne": "Rose wine is made primarily from red grapes, but differs from red wine in that contact with the skins during fermentation is limited. This gives it a characteristic pale pink color, as well as a fresh and fruity flavor profile, with notes of strawberries, melons and flowers.",
+      "descTwo": "This type of wine is versatile and adapts well to a variety of dishes, making it an excellent option to pair with salads, white meats, and tapas. Its freshness and balanced acidity make it ideal to enjoy in warm climates or on informal occasions, offering a refreshing and pleasant experience."
+    },
+    "generoso":{
+      "h2": "Generous",
+      "descOne": "Generous wine is a type of fortified wine that is characterized by its high alcohol content, which is achieved by adding spirit during or after fermentation. This process influences its flavor profile, which can range from dry to sweet, and can include notes of nuts, spices, and caramel.",
+      "descTwo": "Generous wines, such as Sherry, Port and Madeira, are ideal to accompany a variety of dishes, from appetizers to desserts. Their richness and complexity make them a perfect option for tastings, and they can be enjoyed alone or in cocktails, offering a unique and sophisticated experience."
+    },
+    "oporto":{
+      "h2": "Port",
+      "descOne": "Port wine is made mainly from red grapes, brandy is added during fermentation, which stops the process and preserves some of the grape's natural sugars. This results in a sweet flavor, which can vary from notes of red and black fruits to nuances of chocolate and spices.",
+      "descTwo": "Port comes in several styles, such as Ruby, Tawny and Vintage, each with its own characteristics and aging methods. It is an ideal wine to pair with strong cheeses, chocolate desserts or nuts, and it can also be enjoyed alone as a digestif."
+    },
+    "vermut":{
+      "h2": "Vermouth",
+      "descOne": "Vermouth is an aromatized wine that is made from base wine to which herbs, spices and botanicals are added, giving it a distinctive flavor. It can come in dry or sweet versions, and its flavor profile varies depending on the ingredients used, such as wormwood and citrus.",
+      "descTwo": "Its versatility makes it an excellent accompaniment to tapas and cheeses, and its bitterness makes it ideal for whetting your appetite before a meal. With a rich history and variety of styles, vermouth has gained a prominent place in cocktail culture."
+    },
+
+
+
     "buttonBuy": "Buy"
+    
   }
 }

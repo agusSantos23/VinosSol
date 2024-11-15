@@ -1,16 +1,40 @@
 {
-  "ladingPage":{
+  "landingPage":{
     "Authenticate": "Autentificarse",
     "tinto":{
-      "alt": "Red Wine",
+      "h2": "Tinto",
       "descOne": "El vino tinto se diferencia de otros vinos porque se fermenta con las pieles de las uvas, lo que le da su color oscuro y taninos. Esto lo hace más robusto y con un sabor más complejo que el vino blanco, que se hace solo con el jugo de las uvas.",
       "descTwo": "A diferencia del vino rosado, que también se elabora con uvas rojas, el tinto tiene una mayor concentración de sabor y cuerpo debido a la fermentación prolongada con las pieles. Esto lo hace ideal para maridar con platos más fuertes como carnes rojas."
     },
     "blanco":{
-      "alt": "White Wine",
-      "descOne": "",
-      "descTwo": ""
+      "h2": "Blanco",
+      "descOne": "El vino blanco se elabora principalmente a partir del jugo de uvas blancas, lo que le confiere su color claro y un perfil de sabor fresco y ligero. A diferencia del vino tinto, el blanco tiende a ser más afrutado, con notas florales y cítricas que lo hacen muy atractivo.",
+      "descTwo": "Este tipo de vino es ideal para maridar con platos más ligeros, como pescados y mariscos, donde su frescura y acidez complementan los sabores sin abrumarlos. Además, el vino blanco puede disfrutarse tanto joven como envejecido, dependiendo de la variedad de uva y el estilo de vinificación."
     },
+    "rosado":{
+      "h2": "Rosado",
+      "descOne": "El vino rosado se elabora principalmente a partir de uvas tintas, pero se diferencia del vino tinto en que se limita el contacto con las pieles durante la fermentación. Esto le otorga un color característico rosa pálido, además de un perfil de sabor fresco y afrutado, con notas de fresas, melones y flores.",
+      "descTwo": "Este tipo de vino es versátil y se adapta bien a una variedad de platos, lo que lo convierte en una excelente opción para maridar con ensaladas, carnes blancas y tapas. Su frescura y acidez equilibrada lo hacen ideal para disfrutar en climas cálidos o en ocasiones informales, ofreciendo una experiencia refrescante y agradable."
+    },
+    "generoso":{
+      "h2": "Generoso",
+      "descOne": "El vino generoso es un tipo de vino fortificado que se caracteriza por su alto contenido de alcohol, que se logra añadiendo aguardiente durante o después de la fermentación. Este proceso influye en su perfil de sabor, que puede variar desde seco hasta dulce, y puede incluir notas de frutos secos, especias y caramelo.",
+      "descTwo": "Los vinos generosos, como el Jerez, el Oporto y el Madeira, son ideales para acompañar una variedad de platos, desde aperitivos hasta postres. Su riqueza y complejidad los convierten en una opción perfecta para degustaciones, y pueden disfrutarse solos o en cócteles, ofreciendo una experiencia única y sofisticada."
+    },
+    "oporto":{
+      "h2": "Oporto",
+      "descOne": "El vino Oporto se elabora principalmente a partir de uvas tintas, se añade aguardiente durante la fermentación, lo que detiene el proceso y conserva parte de los azúcares naturales de la uva. Esto da como resultado un sabor dulce, que puede variar desde notas de frutas rojas y negras hasta matices de chocolate y especias.",
+      "descTwo": "El Oporto se presenta en varias estilos, como el Ruby, Tawny y Vintage, cada uno con sus propias características y métodos de envejecimiento. Es un vino ideal para maridar con quesos fuertes, postres de chocolate o frutos secos, y también se puede disfrutar solo como un digestivo."
+    },
+    "vermut":{
+      "h2": "Vermut",
+      "descOne": "El vermut es un vino aromatizado que se elabora a partir de vino base al que se le añaden hierbas, especias y botánicos, lo que le confiere un sabor distintivo. Puede presentarse en versiones secas o dulces, y su perfil de sabor varía según los ingredientes utilizados, como ajenjo y cítricos.",
+      "descTwo": "Su versatilidad lo convierte en un excelente acompañante para tapas y quesos, y su amargor lo hace ideal para abrir el apetito antes de una comida. Con una rica historia y una variedad de estilos, el vermut ha ganado un lugar destacado en la cultura de la coctelería."
+    },
+
+
+
     "buttonBuy": "Comprar"
+    
   }
 }

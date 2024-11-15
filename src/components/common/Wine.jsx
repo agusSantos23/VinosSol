@@ -38,7 +38,7 @@ const Wine = ({idWine, invested}) => {
     3: { color: "#e3a6b7", text: "Rosado", delay: "animate-opacityDelay3" },
     4: { color: "#cc711d", text: "Generoso", delay: "animate-opacityDelay1" },
     5: { color: "#4f073e", text: "Oporto", delay: "animate-opacityDelay2" },
-    6: { color: "#690404", text: "Vermu", delay: "animate-opacityDelay3" },
+    6: { color: "#690404", text: "Vermut", delay: "animate-opacityDelay3" },
   }
   const { color, text, delay } = wineTypes[idWine]  // Extrae el color y texto del tipo de vino correspondiente al idWine proporcionado
 

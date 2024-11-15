@@ -14,49 +14,49 @@ const WineDescription = ({ wine }) => {
   switch (wine) {
     case 1:
       img =  "/src/assets/img/redWine.png"
-      title = "Tinto"
-      descOne = "ladingPage.tinto.descOne"
-      descTwo = "ladingPage.tinto.descTwo"
+      title = "landingPage.tinto.h2"
+      descOne = "landingPage.tinto.descOne"
+      descTwo = "landingPage.tinto.descTwo"
       style = "bg-secondary"
       break
 
     case 2:
       img =  "/src/assets/img/whiteWine.png"
-      title = "Algo azul"
-      descOne = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui cumque illum facere blanditiis. Nesciunt perferendis distinctio voluptatum dolore, molestias dicta, adipisci quos, maiores tempore amet fugit optio expedita minima velit."
-      descTwo = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit hic commodi magnam itaque, accusamus labore a id cupiditate tenetur impedit dolorem. Cupiditate modi voluptatem soluta ad ipsum corporis maiores a!"
+      title = "landingPage.blanco.h2"
+      descOne = "landingPage.blanco.descOne"
+      descTwo = "landingPage.blanco.descTwo"
       style = "bg-quaternary"
       break
 
     case 3:
       img =  "/src/assets/img/roseWine.png"
-      title = "Algo verde"
-      descOne = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui cumque illum facere blanditiis. Nesciunt perferendis distinctio voluptatum dolore, molestias dicta, adipisci quos, maiores tempore amet fugit optio expedita minima velit."
-      descTwo = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit hic commodi magnam itaque, accusamus labore a id cupiditate tenetur impedit dolorem. Cupiditate modi voluptatem soluta ad ipsum corporis maiores a!"
+      title = "landingPage.rosado.h2"
+      descOne = "landingPage.rosado.descOne"
+      descTwo = "landingPage.rosado.descTwo"
       style = "bg-secondary"
       break
 
     case 4:
       img =  "/src/assets/img/generosoWine.png"
-      title = "Algo naranja"
-      descOne = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui cumque illum facere blanditiis. Nesciunt perferendis distinctio voluptatum dolore, molestias dicta, adipisci quos, maiores tempore amet fugit optio expedita minima velit."
-      descTwo = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit hic commodi magnam itaque, accusamus labore a id cupiditate tenetur impedit dolorem. Cupiditate modi voluptatem soluta ad ipsum corporis maiores a!"
+      title = "landingPage.generoso.h2"
+      descOne =  "landingPage.generoso.descOne"
+      descTwo =  "landingPage.generoso.descTwo"
       style = "bg-quaternary"
       break
 
     case 5:
       img =  "/src/assets/img/oportoWine.png"
-      title = "Algo amarillo"
-      descOne = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui cumque illum facere blanditiis. Nesciunt perferendis distinctio voluptatum dolore, molestias dicta, adipisci quos, maiores tempore amet fugit optio expedita minima velit."
-      descTwo = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit hic commodi magnam itaque, accusamus labore a id cupiditate tenetur impedit dolorem. Cupiditate modi voluptatem soluta ad ipsum corporis maiores a!"
+      title = "landingPage.oporto.h2"
+      descOne = "landingPage.oporto.descOne"
+      descTwo = "landingPage.oporto.descTwo"
       style = "bg-secondary"
       break
 
     case 6:
       img =  "/src/assets/img/vermuWine.png"
-      title = "Algo violeta"
-      descOne = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui cumque illum facere blanditiis. Nesciunt perferendis distinctio voluptatum dolore, molestias dicta, adipisci quos, maiores tempore amet fugit optio expedita minima velit."
-      descTwo = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit hic commodi magnam itaque, accusamus labore a id cupiditate tenetur impedit dolorem. Cupiditate modi voluptatem soluta ad ipsum corporis maiores a!"
+      title = "landingPage.vermut.h2"
+      descOne = "landingPage.vermut.descOne"
+      descTwo = "landingPage.vermut.descTwo"
       style = "bg-quaternary"
       break
   }
@@ -69,16 +69,16 @@ const WineDescription = ({ wine }) => {
 
       <div className="w-3/5 h-5/6 flex flex-col justify-between items-center text-center text-white">
 
-        <h1 className="text-center text-5xl font-bold font-fire">{title}</h1>
+        <h2 className="text-center text-5xl font-bold font-fire">{t(title)}</h2>
 
-        <div className="relative w-full h-64 mb-10 text-lg">
+        <div className="relative w-full h-72 mb-10 text-lg">
 
-          <p className="absolute left-0 w-4/6 text-pretty text-left">{t(descOne)}</p>
-          <p className="absolute right-7 bottom-0 w-4/6 text-pretty text-right">{t(descTwo)}</p>
+          <p className="absolute left-0 w-3/4 text-pretty text-left">{t(descOne)}</p>
+          <p className="absolute right-7 bottom-0 w-4/5 text-wrap text-left">{t(descTwo)}</p>
 
         </div>
         
-        <button className="w-60 text-xl font-bold border-2 py-3 px-10 rounded hover:bg-selected shadow-md shadow-gray-400 duration-200 ease-in">{t("ladingPage.buttonBuy")}</button>
+        <button className="w-60 text-xl font-bold border-2 py-3 px-10 rounded hover:bg-selected shadow-md shadow-gray-400 duration-200 ease-in">{t("landingPage.buttonBuy")}</button>
       </div>
     </section>
   )
