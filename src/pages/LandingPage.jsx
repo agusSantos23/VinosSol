@@ -5,6 +5,7 @@ import BtnAuth from "../components/common/BtnAuth.jsx"
 import WineDescription from '../components/sections/WineDescription.jsx'
 
 import logoIMG from "../assets/img/logo.png"
+import Footer from "../components/layout/Footer.jsx"
 
 
 const LadingPage = () => {
@@ -77,7 +78,10 @@ const LadingPage = () => {
       <WineDescription wine={4} />
       <WineDescription wine={5} />
       <WineDescription wine={6} />
+
+      <Footer />
     </main>
+    
 
   )
 }

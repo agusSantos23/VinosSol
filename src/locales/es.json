@@ -36,5 +36,22 @@
 
     "buttonBuy": "Comprar"
     
+  },
+  "auth": {
+    "inputs":{
+      "email": "Correo Electronico",
+      "username": "Nombre de Usuario",
+      "password": "Contrasena",
+      "errors": {
+        "need": " es requerido",
+        "atLeastOne": "Debe tener al menos ",
+        "atLeastTwo": " caracteres",
+        "terms": "Debes aceptar los términos y condiciones",
+        "case": "Debe tener mayúscula y minúscula",
+        "coincide": "Las contraseñas no coinciden"
+      }
+    },
+    "logIn": "Iniciar Sesion",
+    "Signup": "Crear Cuenta"
   }
 }

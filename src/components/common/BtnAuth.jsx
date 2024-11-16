@@ -9,11 +9,13 @@ const BtnAuth = ({isLogin = false}) => {
 
 
   return (
-    <Button>
-      <Link to={`/auth?section=${isLogin ?"Login":"Register"}`}>
+    
+    <Link to={`/auth?section=${isLogin ?"login":"register"}`}>
+      <Button>
         {t("landingPage.Authenticate")}
-      </Link>
-    </Button>
+
+      </Button>
+    </Link>
   )
 }
 
