@@ -1,11 +1,12 @@
+import { Link } from "react-router-dom"
 
 const Footer = () => {
   return (
-    <footer className="relative grid grid-cols-4 gap-20 py-10 px-5 bg-secondary text-white text-center">
+    <footer className="relative grid grid-cols-4 gap-24 py-10 px-5 bg-secondary text-white text-center">
 
       <div >
         <h3 className="text-lg font-semibold font-lora tracking-wider">La Copa</h3>
-        <ul className="opacity-70 hover:opacity-100">
+        <ul className="font-thin tracking-wider opacity-70 hover:opacity-100">
           <li className="hover:scale-110">Tinto</li>
           <li className="hover:scale-110">Blanco</li>
           <li className="hover:scale-110">Rosado</li>
@@ -14,9 +15,10 @@ const Footer = () => {
           <li className="hover:scale-110">Vermut</li>
         </ul>
       </div>
+
       <div >
         <h3 className="text-lg font-semibold font-lora tracking-wider">Nuestros Vinos en Tienda</h3>
-        <ul className="opacity-70 hover:opacity-100">
+        <ul className="font-thin tracking-wider opacity-70 hover:opacity-100">
           <li className="hover:scale-110">Tinto</li>
           <li className="hover:scale-110">Blanco</li>
           <li className="hover:scale-110">Rosado</li>
@@ -25,10 +27,11 @@ const Footer = () => {
           <li className="hover:scale-110">Vermut</li>
         </ul>
       </div>
+
       <div className="grid grid-cols-1 gap-4">
         <div>
           <h3 className="text-lg font-semibold font-lora tracking-wider">Secciones</h3>
-          <ul className="opacity-70 hover:opacity-100">
+          <ul className="font-thin tracking-wider opacity-70 hover:opacity-100">
             <li className="hover:scale-110">Iniciar Sesion</li>
             <li className="hover:scale-110">Registrarse</li>
             <li className="hover:scale-110">Lista de Favoritos</li>
@@ -38,13 +41,15 @@ const Footer = () => {
         </div>
 
         <div className="col-span-1">
-          <h3 className="text-lg font-semibold font-lora tracking-wider">Terminos & Condiciones</h3>
+          <Link to="/termsconditions" >
+            <h3 className="text-lg font-semibold font-lora tracking-wider hover:text-selected duration-200 ease-in-out">Terminos & Condiciones</h3>       
+          </Link>
         </div>
       </div>
 
       <div >
         <h3 className="text-lg font-semibold font-lora tracking-wider">Contactanos</h3>
-        <ul className="opacity-70 hover:opacity-100">
+        <ul className="font-thin tracking-wider opacity-70 hover:opacity-100">
           <li className="hover:scale-110">Gmail</li>
           <li className="hover:scale-110">telefono</li>
           <li className="hover:scale-110">youtube</li>
