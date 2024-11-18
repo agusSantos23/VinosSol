@@ -215,46 +215,57 @@ const Layout = ({ children }) => {
 
       <Modal isOpen={isModalOpen} onClose={toggleModal}>
         
-        <header>
-          <div className="size-20 border-4 border-gray-500  rounded-full" />
+        <header className='flex gap-6'>
+          <div className="w-36 h-32 border-4 border-gray-500 rounded-full" />
 
-          <div>
-            <h3>Nombre Usuario</h3>
-            <h3>Correo Electronico</h3>
-            <h3>Contraseña</h3>
+          <div className='flex flex-wrap gap-5'>
+            <InputPatch value="ManuelKiler" />
+            <InputPatch value={"1234568Aa"} type='password' isSensitive/>
+
+            <InputPatch value={"manuelGutierre03@gmail.com"} type='email'/>
+          </div>
+        </header>
+        <main className='h-96 mt-10 flex justify-between'>
+
+          <div className='flex flex-col gap-2'>
+            <h2 className='text-2xl text-center font-fire'>Datos Personales</h2>
+            <label htmlFor="">Nombre Completo:</label>
+            <InputPatch value='Manuel Gimenez Gutierrez' />
+            <InputPatch value='20/07/2001' type='date' />
+            <InputPatch value='+34 943 423 234' isSensitive/>
+          </div>
+          <div className='flex flex-col gap-2'>
+            <h2 className='text-2xl text-center font-fire'>Datos Reparto</h2>
+            <InputPatch value='Cº Ronaldi' isSensitive />
+            <InputPatch value='Cº Ronaldi' type='textarea' isSensitive />
+          </div>
+          <div className='flex flex-col gap-2'>
+            <h2 className='text-2xl text-center font-fire'>Datos Bancarios</h2>
+            <InputPatch value='Manuel Gimenez Gutierrez' />
+            <InputPatch value='Cº Ronaldi' isSensitive />
+            <InputPatch value='1233 2343 8978 3482' isSensitive />
+            <div>
+              <InputPatch value='03/29' type='month' isSensitive/>
+              <InputPatch value='234' isSensitive />
+            </div>
 
           </div>
 
-
-        </header>
-        <main>
-          <InputPatch value={"Manuel"}/>
-
-          <section>
-            <h2>Datos Peronales</h2>
-            
-          </section>
-
-          <section>
-            <h2>Datos de Envio</h2>
-            <h3>Direccion de Envio</h3>
-            <textarea name="" id="">
-              Instrucciones de Entrega
-            </textarea>
-          </section>
-
-          <section>
-            <h2>Datos Bancarios</h2>
-            <h3>Direccion de Facturacion</h3>
-            <h3>Titular de la Cuenta</h3>
-            <h3>Numero de Targeta</h3>
-            <span>
-              <h3>09/2027</h3>
-              <h3>324</h3>
-            </span>
-          </section>
-
         </main>
+
+        <svg 
+          width="1em" 
+          height="1em" 
+          viewBox="0 0 24 24"
+          className='absolute top-3 right-3 size-9 stroke-secondary cursor-pointer hover:stroke-red-600 duration-150'
+        >
+          <path 
+            fill="none" 
+            strokeLinecap="round" 
+            strokeLinejoin="round" 
+            strokeWidth="2" 
+            d="M14 10v7m-4-7v7M6 6v11.8c0 1.12 0 1.68.218 2.108a2 2 0 0 0 .874.874c.427.218.987.218 2.105.218h5.606c1.118 0 1.677 0 2.104-.218c.377-.192.683-.498.875-.874c.218-.428.218-.987.218-2.105V6M6 6h2M6 6H4m4 0h8M8 6c0-.932 0-1.398.152-1.765a2 2 0 0 1 1.082-1.083C9.602 3 10.068 3 11 3h2c.932 0 1.398 0 1.765.152a2 2 0 0 1 1.083 1.083C16 4.602 16 5.068 16 6m0 0h2m0 0h2"/>
+        </svg>
       </Modal>
 
     </main> 

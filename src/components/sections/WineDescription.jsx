@@ -1,5 +1,6 @@
 import PropTypes from "prop-types"
 import { useTranslation } from "react-i18next"
+import { Link } from "react-router-dom"
 
 const WineDescription = ({ wine }) => {
 
@@ -78,7 +79,7 @@ const WineDescription = ({ wine }) => {
 
         </div>
         
-        <button className="w-60 text-xl font-bold border-2 py-3 px-10 rounded hover:bg-selected shadow-md shadow-gray-400 duration-200 ease-in">{t("landingPage.buttonBuy")}</button>
+        <Link to={`/store?wine=${wine}`} className="w-60 text-xl font-bold border-2 py-3 px-10 rounded hover:bg-selected shadow-md shadow-gray-400 duration-200 ease-in">{t("landingPage.buttonBuy")}</Link>
       </div>
     </section>
   )
