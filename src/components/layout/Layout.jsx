@@ -7,6 +7,7 @@ import Modal from './Modal.jsx';
 
 
 import SVGarrowToLeft from '../../assets/svg/common/arrowToLeft.svg'
+import InputPatch from '../common/form/InputPatch.jsx';
 
 
 const Layout = ({ children }) => {
@@ -178,7 +179,7 @@ const Layout = ({ children }) => {
               <li className='w-max'>
                 <Link>Carrito</Link>
               </li>
-              <li className='w-max cursor-pointer' onClick={toggleModal}>Mi perfil</li>
+              <li className='w-max cursor-pointer hover:scale-110 hover:text-selected hover:font-bold duration-150 ease-in' onClick={toggleModal}>Mi perfil</li>
             </ul>
 
           </div>
@@ -220,18 +221,18 @@ const Layout = ({ children }) => {
           <div>
             <h3>Nombre Usuario</h3>
             <h3>Correo Electronico</h3>
+            <h3>Contraseña</h3>
+
           </div>
 
-          <h3>Contraseña</h3>
 
         </header>
         <main>
+          <InputPatch value={"Manuel"}/>
 
           <section>
             <h2>Datos Peronales</h2>
-            <h3>Nombre</h3>
-            <h3>20/07/2002</h3>
-            <h3>Numero de Telefono</h3>
+            
           </section>
 
           <section>
@@ -261,7 +262,7 @@ const Layout = ({ children }) => {
 };
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired, // Valida que 'children' sea un nodo React
+  children: PropTypes.node.isRequired, 
 };
 
 export default Layout;

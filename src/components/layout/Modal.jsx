@@ -29,7 +29,7 @@ const Modal = ({ isOpen, onClose, children }) => {
       </div>
 
       <div
-        className="absolute top-0 left-0 w-full h-full bg-black opacity-50"
+        className="absolute top-0 left-0 w-full h-full bg-black opacity-50 cursor-pointer"
         onClick={onClose}
       />
     </div>
