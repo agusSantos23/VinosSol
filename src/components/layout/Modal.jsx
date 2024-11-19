@@ -6,7 +6,7 @@ const Modal = ({ isOpen, onClose, children }) => {
     <div className={`fixed top-0 left-0 w-screen h-screen flex items-center justify-center transition-opacity duration-300 ease-in-out ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
       
 
-      <div className="relative z-10 w-5/6 min-h-80 px-16 py-5 bg-primary text-secondary rounded shadow-lg">
+      <div className="relative z-10 w-5/6 min-h-80 h-5/6 px-16 py-5 bg-primary text-secondary rounded shadow-lg">
         
         <svg 
           width="1em" 

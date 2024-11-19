@@ -50,7 +50,7 @@ const Wine = ({idWine, invested}) => {
         onMouseEnter={() => setHovered(true)} // Activa hovered al pasar el raton
         onMouseLeave={() => setHovered(false)} // Desactiva hovered al quitar el raton
       >
-        <Link to="#"> 
+        <Link to={`/store?wine=${idWine}`}> 
           <svg
             className={`absolute ${invested ? "right-0" : "left-0"} ${hovered && "animate-swinging" }  `}
             width="176px"

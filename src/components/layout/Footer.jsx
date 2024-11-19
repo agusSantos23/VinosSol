@@ -5,14 +5,27 @@ const Footer = () => {
     <footer className="relative grid grid-cols-4 gap-24 py-10 px-5 bg-secondary text-white text-center">
 
       <div >
-        <h3 className="text-lg font-semibold font-lora tracking-wider">La Copa</h3>
+        <h3 className="text-lg font-semibold font-lora tracking-wider">De la Vid a la Copa</h3>
         <ul className="font-thin tracking-wider opacity-70 hover:opacity-100">
-          <li className="hover:scale-110">Tinto</li>
-          <li className="hover:scale-110">Blanco</li>
-          <li className="hover:scale-110">Rosado</li>
-          <li className="hover:scale-110">Generoso</li>
-          <li className="hover:scale-110">Oporto</li>
-          <li className="hover:scale-110">Vermut</li>
+          <a href="#1"> 
+            <li className="hover:scale-110">Tinto</li>
+          </a>
+          <a href="#2">
+            <li className="hover:scale-110">Blanco</li>
+          </a>
+          <a href="#3">
+            <li className="hover:scale-110">Rosado</li>
+          </a>
+          <a href="#4">
+            <li className="hover:scale-110">Generoso</li>
+          </a>
+          <a href="#5">
+            <li className="hover:scale-110">Oporto</li>
+          </a>
+          <a href="#6">
+            <li className="hover:scale-110">Vermut</li>
+          </a>
+          
         </ul>
       </div>
 

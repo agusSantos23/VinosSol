@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { useState } from 'react'
 
-const InputPatch = ({ value = "undefined", type = "text", isSensitive = false }) => {
+const InputPatch = ({id, value = "undefined", type = "text", isSensitive = false }) => {
   const [isModeEdit, setIsModeEdit] = useState(false) 
   const [isHidden, setIsHidden] = useState(isSensitive) 
   const [currentValue, setCurrentValue] = useState(value) 
@@ -10,7 +10,20 @@ const InputPatch = ({ value = "undefined", type = "text", isSensitive = false })
   const toggleEditMode = () => setIsModeEdit(!isModeEdit)
   const toggleVisibility = () => setIsHidden(!isHidden)
 
-  const handleInputChange = (e) => setInputValue(e.target.value)
+  const handleInputChange = (e) => {
+    let value = e.target.value
+    const fechaRegex = /^\d{4}-\d{2}-\d{2}$/
+
+    if (fechaRegex.test(value)) { 
+
+      const date = new Date(value) 
+      const day = String(date.getDate()).padStart(2, '0') 
+      const month = String(date.getMonth() + 1).padStart(2, '0') 
+      const year = date.getFullYear() 
+      value = `${day}/${month}/${year}` 
+    }
+    setInputValue(value)
+  }
 
   const handleConfirm = () => {
     setCurrentValue(inputValue) 
@@ -28,9 +41,11 @@ const InputPatch = ({ value = "undefined", type = "text", isSensitive = false })
 
       return (
         <textarea
+          id={id}
           placeholder={currentValue}
           onChange={handleInputChange}
-          className="w-full px-7 py-4 bg-secondary text-white text-center truncate rounded-md shadow-md shadow-gray-400"
+          wrap='hard'
+          className="w-full max-h-44 min-h-14 px-7 py-3 bg-secondary text-white text-center rounded-md shadow-md shadow-gray-400"
         />
       )
 
@@ -38,32 +53,54 @@ const InputPatch = ({ value = "undefined", type = "text", isSensitive = false })
 
       return (
         <input
+          id={id}
           type="date"
           placeholder={currentValue}
           onChange={handleInputChange}
-          className="w-full px-7 py-4 bg-secondary text-white text-center truncate rounded-md shadow-md shadow-gray-400"
+          className="w-full px-7 py-3 bg-secondary text-white text-center truncate rounded-md shadow-md shadow-gray-400"
         />
       )
 
     }else if (type === "month") {
 
       return (
-        <input
-          type="month"
-          placeholder={currentValue}
-          onChange={handleInputChange}
-          className="w-full px-7 py-4 bg-secondary text-white text-center truncate rounded-md shadow-md shadow-gray-400"
-        />
+
+        <div className="relative inline-block">
+          <input
+            id={id}
+            type="month"
+            placeholder={currentValue}
+            onChange={handleInputChange}
+            className="w-full px-7 py-3 bg-secondary text-white text-center truncate rounded-md shadow-md shadow-gray-400"
+          />
+
+            <svg 
+              width="1em" 
+              height="1em" 
+              viewBox="0 0 24 24"
+              className='absolute right-5 top-1/2 transform -translate-y-1/2 size-7 stroke-white pointer-events-none'
+            >
+              <path 
+                fill="none" 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth="2" 
+                d="M8 4h-.8c-1.12 0-1.68 0-2.108.218a2 2 0 0 0-.874.874C4 5.52 4 6.08 4 7.2V8m4-4h8M8 4V2m8 2h.8c1.12 0 1.68 0 2.107.218c.377.192.683.497.875.874c.218.427.218.987.218 2.105V8m-4-4V2M4 8v8.8c0 1.12 0 1.68.218 2.108a2 2 0 0 0 .874.874c.427.218.987.218 2.105.218h9.606c1.118 0 1.677 0 2.104-.218c.377-.192.683-.498.875-.874c.218-.428.218-.986.218-2.104V8M4 8h16m-4 8h.002v.002H16zm-4 0h.002v.002H12zm-4 0h.002v.002H8zm8.002-4v.002H16V12zM12 12h.002v.002H12zm-4 0h.002v.002H8z"/>
+            </svg>
+ 
+        </div>
+        
       )
 
     }else{
 
       return (
         <input
+          id={id}
           type="text"
           placeholder={currentValue}
           onChange={handleInputChange}
-          className="w-full px-7 py-4 bg-secondary text-white text-center truncate rounded-md shadow-md shadow-gray-400"
+          className="w-full px-7 py-3 bg-secondary text-white text-center truncate rounded-md shadow-md shadow-gray-400"
         />
       )
 
@@ -71,10 +108,11 @@ const InputPatch = ({ value = "undefined", type = "text", isSensitive = false })
   }
 
   return (
-    <div className="w-80 flex justify-center items-center gap-2 font-lora">
+    
+    <div className={`${ id === "txtCvv" ? "w-52" : "w-80"} flex justify-center items-center gap-2 font-lora`}>
       {!isModeEdit ? (
         <>
-          <h3 className={`w-full px-7 py-4 bg-secondary text-white text-center truncate rounded-md shadow-md shadow-gray-400`}>
+          <h3 className={` ${ id === "txtCvv" ? "w-44" : "w-full"} w-full px-7 py-3 bg-secondary text-white text-center truncate rounded-md shadow-md shadow-gray-400 `}>
             {isSensitive && isHidden ? "●".repeat(value.length) : currentValue}
           </h3>
           {isSensitive && (
@@ -152,10 +190,12 @@ const InputPatch = ({ value = "undefined", type = "text", isSensitive = false })
         </>
       )}
     </div>
+
   )
 }
 
 InputPatch.propTypes = {
+  id: PropTypes.string.isRequired,
   value: PropTypes.string,
   type: PropTypes.string,
   isSensitive: PropTypes.bool,

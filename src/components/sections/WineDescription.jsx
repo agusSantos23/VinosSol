@@ -64,7 +64,7 @@ const WineDescription = ({ wine }) => {
 
   return (
     
-    <section className={"h-screen flex justify-between items-center p-12 font-thin " + style}>
+    <section id={wine} className={"h-screen flex justify-between items-center p-12 font-thin " + style}>
 
       <img src={img} alt={title} className="w-1/3 h-auto rounded-md" />
 

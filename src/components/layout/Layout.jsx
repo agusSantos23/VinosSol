@@ -215,39 +215,64 @@ const Layout = ({ children }) => {
 
       <Modal isOpen={isModalOpen} onClose={toggleModal}>
         
-        <header className='flex gap-6'>
+        <header className='flex justify-center items-center gap-6'>
           <div className="w-36 h-32 border-4 border-gray-500 rounded-full" />
 
-          <div className='flex flex-wrap gap-5'>
-            <InputPatch value="ManuelKiler" />
-            <InputPatch value={"1234568Aa"} type='password' isSensitive/>
-
-            <InputPatch value={"manuelGutierre03@gmail.com"} type='email'/>
+          <div className='flex flex-wrap gap-2'>
+            <div>
+              <label htmlFor="txtUsername">Nombre de Usuario:</label>
+              <InputPatch id='txtUsername' value="ManuelKiler" />
+            </div>
+            <div>
+              <label htmlFor="txtPassword">Contraseña:</label>
+              <InputPatch id='txtPassword' value={"1234568Aa"} type='password' isSensitive/>
+            </div>
+            <div>
+              <label htmlFor="txtEmail">Correo Electronico:</label>
+              <InputPatch id='txtEmail' value={"manuelGutierre03@gmail.com"} type='email'/>
+            </div>
           </div>
         </header>
-        <main className='h-96 mt-10 flex justify-between'>
+        <main className='h-max mt-3 flex justify-between'>
 
-          <div className='flex flex-col gap-2'>
+          <div className='flex flex-col gap-1'>
             <h2 className='text-2xl text-center font-fire'>Datos Personales</h2>
-            <label htmlFor="">Nombre Completo:</label>
-            <InputPatch value='Manuel Gimenez Gutierrez' />
-            <InputPatch value='20/07/2001' type='date' />
-            <InputPatch value='+34 943 423 234' isSensitive/>
+
+            <label htmlFor="txtFullName">Nombre Completo:</label>
+            <InputPatch id='txtFullName' value='Manuel Gimenez Gutierrez' />
+
+            <label htmlFor="txtBirthDate">Fecha de Nacimiento:</label>
+            <InputPatch id='txtBirthDate' value='20/07/2001' type='date' />
+            
+            <label htmlFor="txtPhoneNumber">Numero de Telefono:</label>
+            <InputPatch id='txtPhoneNumber' value='+34 943 423 234' />
           </div>
-          <div className='flex flex-col gap-2'>
+          <div className='flex flex-col gap-1'>
             <h2 className='text-2xl text-center font-fire'>Datos Reparto</h2>
-            <InputPatch value='Cº Ronaldi' isSensitive />
-            <InputPatch value='Cº Ronaldi' type='textarea' isSensitive />
+
+            <label htmlFor="txtAddress">Domicilio:</label>
+            <InputPatch id="txtAddress" value='Cº Ronaldi' />
+
+            <label htmlFor="txtArea">Instrucciones de Entrega:</label>
+            <InputPatch id='txtArea' value='Tira el paquete por arriba' type='textarea'  />
           </div>
-          <div className='flex flex-col gap-2'>
+          <div className='flex flex-col justify-start items-center gap-1 text-left'>
             <h2 className='text-2xl text-center font-fire'>Datos Bancarios</h2>
-            <InputPatch value='Manuel Gimenez Gutierrez' />
-            <InputPatch value='Cº Ronaldi' isSensitive />
-            <InputPatch value='1233 2343 8978 3482' isSensitive />
-            <div>
-              <InputPatch value='03/29' type='month' isSensitive/>
-              <InputPatch value='234' isSensitive />
-            </div>
+
+            <label htmlFor="txtCardName" className='w-full'>Titular de la tarjeta:</label>
+            <InputPatch id='txtCardName' value='Manuel Gimenez Gutierrez' />
+
+            <label htmlFor="txtBillingAddress" className='w-full'>Direccion de Facturacion:</label>
+            <InputPatch id='txtBillingAddress' value='Cº Ronaldi' isSensitive />
+
+            <label htmlFor="txtCardNumber" className='w-full'>Numero de tarjeta:</label>
+            <InputPatch id='txtCardNumber' value='1233 2343 8978 3482' isSensitive />
+        
+            <label htmlFor="txtExpirationDate" className='w-full'>Fecha Expiracion:</label>
+            <InputPatch id='txtExpirationDate' value='03/29' type='month' isSensitive/>
+            
+            <label htmlFor="txtExpirationDate" className='w-52'>CVV:</label>
+            <InputPatch id='txtCvv' value='234' isSensitive />
 
           </div>
 
