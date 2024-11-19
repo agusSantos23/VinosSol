@@ -8,7 +8,7 @@ const Button = ({children, onClick}) => {
       className="
         font-lora font-semibold tracking-wider px-4 py-1 border-2 border-secondary rounded shadow-md shadow-gray-400
         dark:text-primary dark:border-primary
-        transition duration-300 ease-in-out 
+        duration-300 ease-in-out 
         hover:bg-selected hover:text-primary hover:border-selected
       "
     >

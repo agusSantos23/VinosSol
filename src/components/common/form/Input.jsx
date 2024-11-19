@@ -31,14 +31,14 @@ const Input = ({
 
   if (type === "password") {
     return (
-      <div className='flex flex-col gap-2'>
+      <div className='flex flex-col gap-1'>
         <div className="relative">
           <input
             type={viewPassword ? "password" : "text"}
             id={id}
             name={id}
             placeholder={placeholder}
-            className="w-72 px-2 py-1 bg-secondary text-center text-lg text-primary border-2 rounded-md border-gray-300 focus:outline-none focus:shadow-green-focus focus:border-green-500"
+            className="w-80 px-8 py-3 bg-secondary text-center text-lg text-primary border-4 rounded-md border-transparent focus:outline-none "
             {...register(id, {
               required: {
                 value: required,
@@ -60,21 +60,21 @@ const Input = ({
             onClick={handledView}
             src={viewPassword ? lockClose : lockOpen}
             alt={viewPassword ? 'View password' : 'Hide password'}
-            className="absolute right-1 top-1/2 -translate-y-1/2 stroke-blue-400 cursor-pointer w-6"
+            className="absolute right-2 top-1/2 -translate-y-1/2 size-6 cursor-pointer"
           />
         </div>
-        {errors[id] && <span className='ml-1 pl-2 border-l-2 rounded-xl border-red-400 tracking-wide text-xs'>{errors[id].message}</span>}
+        {errors[id] && <span className='text-red-600 tracking-wide text-sm font-semibold'>{errors[id].message}</span>}
       </div>
     );
   } else {
     return (
-      <div className='flex flex-col gap-2'>
+      <div className='flex flex-col gap-1'>
         <input
           type={type}
           id={id}
           name={id}
           placeholder={placeholder}
-          className="w-72 border-2 rounded-md bg-secondary text-primary border-gray-300 shadow-md text-center text-lg  px-2 py-1 focus:outline-none focus:shadow-green-focus focus:border-green-500"
+          className="w-80 px-8 py-3  bg-secondary text-center text-lg text-primary  border-4 rounded-md border-transparent focus:outline-none "
           {...register(id, {
             required: {
               value: required,
@@ -87,7 +87,7 @@ const Input = ({
           })}
           {...props}
         />
-        {errors[id] && <span className='ml-1 pl-2 border-l-2 rounded-xl border-red-400 tracking-wide text-xs'>{errors[id].message}</span>}
+        {errors[id] && <span className='text-red-600 tracking-wide text-sm font-semibold'>{errors[id].message}</span>}
       </div>
     );
   }

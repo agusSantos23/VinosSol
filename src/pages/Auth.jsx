@@ -33,7 +33,7 @@ const Auth = () => {
 
   
   return (
-    <main className='flex justify-center items-center  bg-primary h-screen'>
+    <main className='flex justify-center items-center bg-third h-screen'>
 
       <Link to="/">
         <img 
@@ -44,18 +44,18 @@ const Auth = () => {
       </Link>
       
       
-      <div className='w-5/6 h-5/6 flex justify-center items-center gap-5 bg-third rounded-md'>
+      <div className='w-3/4 h-5/6 flex justify-between items-center gap-5 p-10 bg-primary rounded-md'>
         {section === "login" ? (
           <>
             <img 
               src={IMGgeneroso} 
               alt="Generoso Wine" 
-              className='h-5/6 rounded-lg'
+              className='h-full rounded-lg'
             />
 
-            <form onSubmit={handleSubmit(onSubmit)} className='w-3/5 h-5/6 flex flex-col justify-around items-center'>
+            <form onSubmit={handleSubmit(onSubmit)} className='w-2/4 h-5/6 flex flex-col justify-between items-center'>
               
-              <div className='h-36 flex flex-col justify-between'>
+              <div className='h-48 flex flex-col justify-between'>
                 <Input 
                   type="email" 
                   id="email" 
@@ -77,26 +77,24 @@ const Auth = () => {
 
               </div>
 
-              <div className='w-full flex flex-col justify-center items-center gap-5'>
+              <div className='h-28 flex flex-col justify-between items-center'>
                 <button 
                   type="submit" 
-                  className="ml-4 px-4 py-2 bg-green-500 text-white rounded-md"
+                  className="w-56 px-4 py-1 text-lg text-secondary font-bold tracking-widest border-4 border-secondary rounded-md duration-300 ease-in-out hover:bg-selected hover:text-primary hover:border-selected"
                 >
                   {t("auth.logIn")}
                 </button>
 
-                
-                <hr  className='w-3/4'/>
+                <hr className="w-2/5 border-t-4 rounded border-secondary" />
 
                 <button
-                  className="ml-4 px-4 py-2 bg-green-500 text-white rounded-md"
                   onClick={(e) => handleSectionChange("register", e)}
+                  className="w-56 px-4 py-1 text-lg text-secondary font-bold tracking-widest border-4 border-emerald-700 rounded-md duration-300 ease-in-out hover:bg-selected hover:text-primary hover:border-selected"
                 >
                   Register
                 </button>
-              </div>
 
-              
+              </div>
 
             </form>
           </>
