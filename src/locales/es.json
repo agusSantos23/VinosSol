@@ -48,7 +48,7 @@
         "atLeastTwo": " caracteres",
         "terms": "Debes aceptar los términos y condiciones",
         "case": "Debe tener mayúscula y minúscula",
-        "coincide": "Las contraseñas no coinciden"
+        "matches": "Las contraseñas no coinciden"
       }
     },
     "logIn": "Iniciar Sesion",

@@ -35,6 +35,11 @@ const InputPatch = ({id, value = "undefined", type = "text", isSensitive = false
     setIsModeEdit(false) 
   }
 
+  const handleCalendarClick = () => {
+    const inputElement = document.getElementById(id);
+    inputElement.showPicker ? inputElement.showPicker() :inputElement.click()
+  }
+
   const renderInputField = () => {
 
     if (type === "textarea") {
@@ -49,36 +54,25 @@ const InputPatch = ({id, value = "undefined", type = "text", isSensitive = false
         />
       )
 
-    }else if (type === "date") {
-
-      return (
-        <input
-          id={id}
-          type="date"
-          placeholder={currentValue}
-          onChange={handleInputChange}
-          className="w-full px-7 py-3 bg-secondary text-white text-center truncate rounded-md shadow-md shadow-gray-400"
-        />
-      )
-
-    }else if (type === "month") {
+    }else if (type === "date" || type === "month") {
 
       return (
 
-        <div className="relative inline-block">
+        <div className={`relative ${type === "date" && "w-full"} inline-block`}>
           <input
             id={id}
-            type="month"
+            type={type}
             placeholder={currentValue}
             onChange={handleInputChange}
-            className="w-full px-7 py-3 bg-secondary text-white text-center truncate rounded-md shadow-md shadow-gray-400"
+            className="w-full px-7 py-3 bg-secondary text-white text-center rounded-md shadow-md shadow-gray-400"
           />
 
             <svg 
               width="1em" 
               height="1em" 
               viewBox="0 0 24 24"
-              className='absolute right-5 top-1/2 transform -translate-y-1/2 size-7 stroke-white pointer-events-none'
+              onClick={handleCalendarClick}
+              className='absolute right-5 top-1/2 transform -translate-y-1/2 size-7 stroke-white cursor-pointer hover:stroke-selected hover:scale-110 duration-150 ease-in'
             >
               <path 
                 fill="none" 
@@ -89,11 +83,8 @@ const InputPatch = ({id, value = "undefined", type = "text", isSensitive = false
             </svg>
  
         </div>
-        
       )
-
     }else{
-
       return (
         <input
           id={id}
@@ -109,7 +100,7 @@ const InputPatch = ({id, value = "undefined", type = "text", isSensitive = false
 
   return (
     
-    <div className={`${ id === "txtCvv" ? "w-52" : "w-80"} flex justify-center items-center gap-2 font-lora`}>
+    <div className={`${ id === "txtCvv" ? "w-52" : "w-80"} flex items-center gap-2 font-lora`}>
       {!isModeEdit ? (
         <>
           <h3 className={` ${ id === "txtCvv" ? "w-44" : "w-full"} w-full px-7 py-3 bg-secondary text-white text-center truncate rounded-md shadow-md shadow-gray-400 `}>
@@ -160,7 +151,7 @@ const InputPatch = ({id, value = "undefined", type = "text", isSensitive = false
               width="1em"
               height="1em"
               viewBox="4 4 16 16"
-              className="size-7 stroke-secondary cursor-pointer hover:stroke-green-500 duration-200"
+              className="size-6 stroke-secondary cursor-pointer hover:stroke-green-500 duration-200"
             >
               <path
                 fill="none"
@@ -176,7 +167,7 @@ const InputPatch = ({id, value = "undefined", type = "text", isSensitive = false
               width="1em"
               height="1em"
               viewBox="5 5 14 14"
-              className="size-7 stroke-secondary cursor-pointer hover:stroke-red-500 duration-200"
+              className="size-6 stroke-secondary cursor-pointer hover:stroke-red-500 duration-200"
             >
               <path
                 fill="none"
