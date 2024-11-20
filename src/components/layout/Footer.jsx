@@ -55,7 +55,7 @@ const Footer = () => {
 
         <div className="col-span-1">
           <Link to="/termsconditions" >
-            <h3 className="text-lg font-semibold font-lora tracking-wider hover:text-selected duration-200 ease-in-out">Terminos & Condiciones</h3>       
+            <h3 className="text-lg font-semibold font-lora tracking-wider hover:text-selected duration-200 ease-in-out">Politica de Privacidad</h3>       
           </Link>
         </div>
       </div>

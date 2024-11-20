@@ -2,7 +2,7 @@ import { useForm } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
 import { Link, useLocation,useNavigate  } from 'react-router-dom'
 
-import Input from '../components/common/form/Input';
+import Input from '../components/common/form/Input'
 
 import SVGarrowToLeft from '../assets/svg/common/arrowToLeft.svg'
 import IMGgeneroso from "../assets/img/generosoWine.png"
@@ -10,24 +10,24 @@ import IMGred from "../assets/img/redWine.png"
 
 
 const Auth = () => {
-  const { register, handleSubmit, formState: { errors },watch } = useForm();
+  const { register, handleSubmit, formState: { errors },watch } = useForm()
   const { t } = useTranslation()
 
-  const location = useLocation();
-  const navigate = useNavigate();
+  const location = useLocation()
+  const navigate = useNavigate()
 
 
-  const params = new URLSearchParams(location.search);
-  const section = params.get("section");
+  const params = new URLSearchParams(location.search)
+  const section = params.get("section")
 
   const handleSectionChange = (newSection, e) => {
-    e.preventDefault();
-    navigate(`/auth?section=${newSection}`);
-  };
+    e.preventDefault()
+    navigate(`/auth?section=${newSection}`)
+  }
 
   const onSubmit = async (data) => {
     
-    console.log(data);
+    console.log(data)
     
   }
 
@@ -53,9 +53,9 @@ const Auth = () => {
               className='h-full rounded-lg'
             />
 
-            <form onSubmit={handleSubmit(onSubmit)} className='w-2/4 h-5/6 flex flex-col justify-between items-center'>
+            <form onSubmit={handleSubmit(onSubmit)} className='w-2/4 h-5/6 flex flex-col justify-center items-center gap-10'>
               
-              <div className='h-48 flex flex-col justify-between'>
+              <div className='flex flex-col justify-between gap-3'>
                 <Input 
                   type="email" 
                   id="email" 
@@ -77,7 +77,7 @@ const Auth = () => {
 
               </div>
 
-              <div className='h-28 flex flex-col justify-between items-center'>
+              <div className='flex flex-col justify-between items-center gap-5'>
                 <button 
                   type="submit" 
                   className="w-56 px-4 py-1 text-lg text-secondary font-bold tracking-widest border-4 border-secondary rounded-md duration-300 ease-in-out hover:bg-selected hover:text-primary hover:border-selected"
@@ -85,11 +85,11 @@ const Auth = () => {
                   {t("auth.logIn")}
                 </button>
 
-                <hr className="w-2/5 border-t-4 rounded border-secondary" />
+                <hr className="w-3/5 border-t-4 rounded border-secondary" />
 
                 <button
                   onClick={(e) => handleSectionChange("register", e)}
-                  className="w-56 px-4 py-1 text-lg text-secondary font-bold tracking-widest border-4 border-emerald-700 rounded-md duration-300 ease-in-out hover:bg-selected hover:text-primary hover:border-selected"
+                  className="w-56 px-4 py-1 bg-third text-lg text-secondary font-bold tracking-widest border-4 border-third rounded-md duration-300 ease-in-out hover:bg-selected hover:text-primary hover:border-selected"
                 >
                   Register
                 </button>
@@ -100,10 +100,9 @@ const Auth = () => {
           </>
         ) : section === "register" ? (
           <>
-            
             <form onSubmit={handleSubmit(onSubmit)} className='w-3/5 h-5/6 flex flex-col justify-around items-center'>
               
-              <div className='h-72 flex flex-col justify-between'>
+              <div className='flex flex-col justify-between gap-3'>
                 <Input 
                   type="email" 
                   id="email" 
@@ -147,8 +146,8 @@ const Auth = () => {
 
               </div>
 
-              <div>
-                <div className="flex items-center mt-4">
+              <div className='w-80'>
+                <div className="flex items-center">
                   <input 
                     type="checkbox" 
                     id="terms" 
@@ -160,26 +159,26 @@ const Auth = () => {
                   />
 
                   <label htmlFor="terms" className="text-sm text-gray-700">
-                    Acepta los <Link to="/termsconditions" className="text-blue-500">Terminos & Condiciones</Link>
+                    Acepto el tratamiento de mis datos personales de acuerdo con la <Link to="/termsconditions" className="text-blue-500 hover:text-selected">Politica de Privacidad</Link>
                   </label>
                 </div>
 
                 {errors.terms && <span className="text-red-500 text-xs">{errors.terms.message}</span>}
               </div>
 
-              <div className='w-full flex flex-col justify-center items-center gap-5'>
+              <div className='flex flex-col justify-between items-center gap-5'>
                 <button 
                   type="submit" 
-                  className="ml-4 px-4 py-2 bg-green-500 text-white rounded-md"
+                  className="w-56 px-4 py-1 text-lg text-secondary font-bold tracking-widest border-4 border-secondary rounded-md duration-300 ease-in-out hover:bg-selected hover:text-primary hover:border-selected"
                 >
                   {t("auth.Signup")}
                 </button>
                 
-                <hr  className='w-3/4'/>
+                <hr className="w-3/5 border-t-4 rounded border-secondary"/>
 
                 <button
-                  className="ml-4 px-4 py-2 bg-green-500 text-white rounded-md"
                   onClick={(e) => handleSectionChange("login", e)}
+                  className="w-56 px-4 py-1 bg-third text-lg text-secondary font-bold tracking-widest border-4 border-third rounded-md duration-300 ease-in-out hover:bg-selected hover:text-primary hover:border-selected"
                 >
                   Login
                 </button>
@@ -191,7 +190,7 @@ const Auth = () => {
             <img 
               src={IMGred} 
               alt="Red Wine" 
-              className='h-5/6 rounded-lg'              
+              className='h-full rounded-lg'              
             />
 
           </>
@@ -200,7 +199,7 @@ const Auth = () => {
         )}
       </div>
     </main>
-  );
-};
+  )
+}
 
 export default Auth
