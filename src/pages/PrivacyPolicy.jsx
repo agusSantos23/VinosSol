@@ -19,7 +19,7 @@ const PrivacyPolicy = () => {
 
       <div className='w-4/6 h-5/6 px-10 py-5 bg-third rounded-md overflow-y-auto'>
 
-        <header className="flex-col mb-4">
+        <header className="flex flex-col mb-4">
           <h1 className="text-center text-4xl font-bold font-lora mb-2">Documentación de la política de privacidad</h1>
           <p>
             En Vinos del Sol ,nos comprometemos a proteger y respetar su privacidad en lo que se refiere a sus datos personales .Esta es nuestra Política de Privacidad donde se detallarán como se recopilan ,gestionan y protegen sus datos cuando accede a nuestra página web y hace compra del mejor vino.
@@ -35,7 +35,7 @@ const PrivacyPolicy = () => {
 
           <PrivacySection title="Datos que Recopilamos">
             <p>Recopilamos los siguientes datos personales:</p>
-            <ul>
+            <ul className="list-disc ml-4">
               <li>
                 <b>Informacion de contact:</b> Nombre, apellidos, dirección de correo electrónico y número de teléfono.
               </li>
@@ -54,7 +54,7 @@ const PrivacyPolicy = () => {
           
           <PrivacySection title="Finalidad del Tratamiento">
             <p>Sus datos personales se usarán con la finalidad de:</p>
-            <ul>
+            <ul className="list-disc ml-4">
               <li>
                 <b>Gestión de pedidos:</b> Procesar y gestionar sus compras, incluyendo la entrega de productos y la facturación.
               </li>
@@ -80,7 +80,7 @@ const PrivacyPolicy = () => {
 
           <PrivacySection title="Derechos de los usuarios">
             <p>El usuario tiene derecho a:</p>
-            <ul>
+            <ul className="list-disc ml-4">
               <li>Acceder a sus datos personales.</li>
               <li>Rectificar datos inexactos o incompletos.</li>
               <li>Suprimir sus datos cuando ya no sean necesarios.</li>
@@ -114,7 +114,7 @@ const PrivacyPolicy = () => {
 
           <PrivacySection title="Información de Contacto">
             <p>Si resulta tener alguna duda sobre nosotros o sobre esta política de privacidad no dude en ponerse en contacto con nosotros mediante los siguientes medios:</p>
-            <ul>
+            <ul className="list-disc ml-4">
               <li><b>Correo Electrónico:</b> vinosSol2024@gmail.com</li>
               <li><b>Teléfono:</b> 91 123 45 67</li>
               <li><b>Dirección:</b> Calle de la Vina, 12, 28004 Madrid, España</li>
