@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import PrivacySection from "../components/sections/PrivacySection.jsx"
 
 import SVGarrowToLeft from '../assets/svg/common/arrowToLeft.svg'
 
@@ -23,18 +24,14 @@ const PrivacyPolicy = () => {
           En Vinos del Sol ,nos comprometemos a proteger y respetar su privacidad en lo que se refiere a sus datos personales .Esta es nuestra Política de Privacidad donde se detallarán como se recopilan ,gestionan y protegen sus datos cuando accede a nuestra página web y hace compra del mejor vino.
         </p>
 
-        <section>
-          <h2>Responsable del Tratamiento de Datos</h2>
-
+        <PrivacySection title="Responsable del Tratamiento de Datos">
           <p>
             El responsable del tratamiento de sus datos personales es Vinos del Sol ,con domicilio en Calle de la Vina, 12, 28004 Madrid, España , y correo electrónico de contacto: <b>vinosSol2024@gmail.com</b>
           </p>
+        </PrivacySection>
 
-        </section>
-
-        <section>
-          <h2>Datos que Recopilamos</h2>
-          <h3>Recopilamos los siguientes datos personales:</h3>
+        <PrivacySection title="Datos que Recopilamos">
+          <p>Recopilamos los siguientes datos personales:</p>
           <ul>
             <li>
               <b>Informacion de contact:</b> Nombre, apellidos, dirección de correo electrónico y número de teléfono.
@@ -50,11 +47,10 @@ const PrivacyPolicy = () => {
             </li>
           </ul>
 
-        </section>
+        </PrivacySection>
         
-        <section>
-          <h2>Finalidades del Tratamiento</h2>
-          <h3>Sus datos personales se usarán con la finalidad de:</h3>
+        <PrivacySection title="Finalidad del Tratamiento">
+          <p>Sus datos personales se usarán con la finalidad de:</p>
           <ul>
             <li>
               <b>Gestión de pedidos:</b> Procesar y gestionar sus compras, incluyendo la entrega de productos y la facturación.
@@ -71,18 +67,16 @@ const PrivacyPolicy = () => {
             Todos sus datos se asignarán a los credenciales de acceso de su cuenta personal para llevar a cabo los usos mencionados en un futuro.
           </p>
           
-        </section>
+        </PrivacySection>
 
-        <section>
-          <h2>Seguridad de los datos</h2>
+        <PrivacySection title="Seguridad de los datos">
           <p>
             Implementamos medidas de seguridad técnicas y organizativas adecuadas para proteger sus datos personales contra el acceso no autorizado, la pérdida o el uso indebido. Toda la información recogida será encriptada para garantizar su confidencialidad y seguridad.
           </p>
-        </section>
+        </PrivacySection>
 
-        <section>
-          <h2>Derechos de los usuarios</h2>
-          <h3>El usuario tiene derecho a:</h3>
+        <PrivacySection title="Derechos de los usuarios">
+          <p>El usuario tiene derecho a:</p>
           <ul>
             <li>Acceder a sus datos personales.</li>
             <li>Rectificar datos inexactos o incompletos.</li>
@@ -95,29 +89,27 @@ const PrivacyPolicy = () => {
             Para ejercer estos derechos, puede ponerse en contacto con nosotros a través del correo electrónico vinosSol2024@gmail.com.
           </p>
 
-        </section>
+        </PrivacySection>
 
-        <section>
-          <h2>Transferencia de Datos</h2>
+        <PrivacySection title="Transferencia de datos">
           <p>
             No realizamos transferencias de sus datos a ningún tercero ,salvo para brindar información a gestores de envío o si contamos con tu consentimiento.
           </p>
-        </section>
-        <section>
-          <h2>Uso de Cookies</h2>
+        </PrivacySection>
+
+        <PrivacySection title="Uso de Cookies">
           <p>
             Nuestro sitio web utiliza cookies para mejorar su experiencia de navegación. Para más información sobre las cookies que utilizamos y cómo gestionarlas, consulte nuestra Política de Cookies.
           </p>
-        </section>
-        <section>
-          <h2>Derecho de modificación de la Política de Privacidad</h2>
+        </PrivacySection>
+
+        <PrivacySection title="Derecho de modificación de la Política de Privacidad">
           <p>
             Nuestra Política de Privacidad podrá estar sujeta a cambios en cualquier momento y se notificará al usuario cualquiera de estos.
           </p>
-        </section>
+        </PrivacySection>
 
-        <section>
-          <h2>Información de Contacto</h2>
+        <PrivacySection title="Información de Contacto">
           <p>Si resulta tener alguna duda sobre nosotros o sobre esta política de privacidad no dude en ponerse en contacto con nosotros mediante los siguientes medios:</p>
           <ul>
             <li><b>Correo Electrónico:</b> vinosSol2024@gmail.com</li>
@@ -128,7 +120,7 @@ const PrivacyPolicy = () => {
             <li><b>TikTok:</b> @vinosdelsol</li>
             <li><b>YouTube:</b> @VinosDelSol</li>
           </ul>
-        </section>
+        </PrivacySection>
 
       </div>
       
