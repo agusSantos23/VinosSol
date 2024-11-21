@@ -31,17 +31,21 @@
       "descOne": "El vermut es un vino aromatizado que se elabora a partir de vino base al que se le añaden hierbas, especias y botánicos, lo que le confiere un sabor distintivo. Puede presentarse en versiones secas o dulces, y su perfil de sabor varía según los ingredientes utilizados, como ajenjo y cítricos.",
       "descTwo": "Su versatilidad lo convierte en un excelente acompañante para tapas y quesos, y su amargor lo hace ideal para abrir el apetito antes de una comida. Con una rica historia y una variedad de estilos, el vermut ha ganado un lugar destacado en la cultura de la coctelería."
     },
-
-
-
     "buttonBuy": "Comprar"
-    
   },
+
   "auth": {
     "inputs":{
       "email": "Correo Electronico",
       "username": "Nombre de Usuario",
-      "password": "Contrasena",
+      "password": "Contraseña",
+      "phoneNumber": "Numero de Telefono",
+      "fullName": "Nombre Completo",
+      "date": "Fecha de Nacimiento",
+      "treatment": "Acepto el tratamiento de mis datos personales de acuerdo con la ",
+      "option": "Selecciona una Opcion",
+      "conditions": "Terminos y Condiciones",
+      
       "errors": {
         "need": " es requerido",
         "atLeastOne": "Debe tener al menos ",
@@ -52,6 +56,49 @@
       }
     },
     "logIn": "Iniciar Sesion",
+    "register": "Registrarse",
     "Signup": "Crear Cuenta"
+  },
+
+  "layout":{
+    "favoriteList": "Lista de Favoritos",
+    "cart": "Carrito",
+    "profile": "Mi Perfil",
+    "menu":{
+      "myProfile":{
+        "labels":{
+          "userName": "Nombre de Usuario",
+          "password": "Contraseña",
+          "email": "Correo Electronico",
+          "fullname": "Nombre Completo",
+          "date": "Fecha de Nacimiento",
+          "phone": "Numero de Telefono",
+          "home": "Domicilio",
+          "Instructions": "Instruciones de Entrega",
+          "cardholder": "Titular de la Tarjeta",
+          "facturation": "Direccion de Facturacion",
+          "cardnumber": "Numero de la Tarjeta",
+          "expiration": "Fecha de Expiracion"
+        },
+        "sectionTitle":{
+          "personal": "Datos personales",
+          "delivery": "Datos Reparto",
+          "bank": "Datos Bancarios"
+        }
+      }
+    }
+  },
+
+  "footer":{
+    "title":{
+      "vine": "De la Vid a la Copa",
+      "ourWines": "Nuestros Vinos en Tienda",
+      "section": "Secciones",
+      "privacy": "Politica de Privacidad",
+      "contact": "Contacto",
+      "list": "Lista de Favoritos",
+      "cart": "Carrito",
+      "profile": "Mi Perfil"
+    }
   }
 }

@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next'
+
 
 import LanguageSwitcher from "../../components/common/LanguageSwitcher.jsx"
 import Modal from './Modal.jsx';
@@ -15,7 +17,7 @@ const Layout = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-
+  const { t } = useTranslation()
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen) 
   const toggleModal = () => setIsModalOpen(!isModalOpen)
 
@@ -174,12 +176,12 @@ const Layout = ({ children }) => {
 
             <ul className='flex flex-col gap-7 text-xl'>
               <li className='w-max'>
-                <Link>Lista de Deseos</Link>
+                <Link>{t("layout.favoriteList")}</Link>
               </li>
               <li className='w-max'>
-                <Link>Carrito</Link>
+                <Link>{t("layout.cart")}</Link>
               </li>
-              <li className='w-max cursor-pointer hover:scale-110 hover:text-selected hover:font-bold duration-150 ease-in' onClick={toggleModal}>Mi perfil</li>
+              <li className='w-max cursor-pointer hover:scale-110 hover:text-selected hover:font-bold duration-150 ease-in' onClick={toggleModal}>{t("layout.profile")}</li>
             </ul>
 
           </div>
@@ -191,7 +193,7 @@ const Layout = ({ children }) => {
               width="1em" 
               height="1em" 
               viewBox="0 0 24 24" 
-              className="size-10 cursor-pointer stroke-primary hover:stroke-red-500 hover:scale-110 duration-200 ease-in"
+              className="size-10 cursor-pointer stroke-secondary dark:stroke-primary hover:stroke-red-500 hover:scale-110 duration-200 ease-in"
             >
               <path
                 fill="none"
@@ -220,15 +222,15 @@ const Layout = ({ children }) => {
 
           <div className='flex flex-wrap gap-2'>
             <div>
-              <label htmlFor="txtUsername">Nombre de Usuario:</label>
+              <label htmlFor="txtUsername">{t("layout.menu.myProfile.labels.userName")}:</label>
               <InputPatch id='txtUsername' value="ManuelKiler" />
             </div>
             <div>
-              <label htmlFor="txtPassword">Contraseña:</label>
+              <label htmlFor="txtPassword">{t("layout.menu.myProfile.labels.password")}:</label>
               <InputPatch id='txtPassword' value={"1234568Aa"} type='password' isSensitive/>
             </div>
             <div>
-              <label htmlFor="txtEmail">Correo Electronico:</label>
+              <label htmlFor="txtEmail">{t("layout.menu.myProfile.labels.email")}:</label>
               <InputPatch id='txtEmail' value={"manuelGutierre03@gmail.com"} type='email'/>
             </div>
           </div>
@@ -236,43 +238,49 @@ const Layout = ({ children }) => {
         <main className='h-max mt-3 flex justify-between'>
 
           <div className='flex flex-col gap-1'>
-            <h2 className='text-2xl text-center font-fire'>Datos Personales</h2>
+            <h2 className='text-2xl font-fire'>{t("layout.menu.myProfile.sectionTitle.personal")}</h2>
+            <div>
+              <label htmlFor="txtFullName">{t("layout.menu.myProfile.labels.fullname")}:</label>
+              <InputPatch id='txtFullName' value='Manuel Jimenez Gutierrez' />
 
-            <label htmlFor="txtFullName">Nombre Completo:</label>
-            <InputPatch id='txtFullName' value='Manuel Gimenez Gutierrez' />
-
-            <label htmlFor="txtBirthDate">Fecha de Nacimiento:</label>
-            <InputPatch id='txtBirthDate' value='20/07/2001' type='date' />
-            
-            <label htmlFor="txtPhoneNumber">Numero de Telefono:</label>
-            <InputPatch id='txtPhoneNumber' value='+34 943 423 234' />
+              <label htmlFor="txtBirthDate">{t("layout.menu.myProfile.labels.date")}:</label>
+              <InputPatch id='txtBirthDate' value='20/07/2001' type='date' />
+              <label htmlFor="txtPhoneNumber">{t("layout.menu.myProfile.labels.phone")}:</label>
+              <InputPatch id='txtPhoneNumber' value='+34 943 423 234' />
+            </div>
           </div>
           <div className='flex flex-col gap-1'>
-            <h2 className='text-2xl text-center font-fire'>Datos Reparto</h2>
+            <h2 className='text-2xl text-center font-fire'>{t("layout.menu.myProfile.sectionTitle.delivery")}</h2>
+            <div>
+              <label htmlFor="txtAddress">{t("layout.menu.myProfile.labels.home")}:</label>
+              <InputPatch id="txtAddress" value='Cº Ronaldi' />
 
-            <label htmlFor="txtAddress">Domicilio:</label>
-            <InputPatch id="txtAddress" value='Cº Ronaldi' />
+              <label htmlFor="txtArea">{t("layout.menu.myProfile.labels.Instructions")}:</label>
+              <InputPatch id='txtArea' value='Tira el paquete por arriba' type='textarea'  />
 
-            <label htmlFor="txtArea">Instrucciones de Entrega:</label>
-            <InputPatch id='txtArea' value='Tira el paquete por arriba' type='textarea'  />
+            </div>
+
+            
           </div>
           <div className='flex flex-col justify-start items-center gap-1 text-left'>
-            <h2 className='text-2xl text-center font-fire'>Datos Bancarios</h2>
+            <h2 className='text-2xl text-left font-fire'>{t("layout.menu.myProfile.sectionTitle.bank")}</h2>
 
-            <label htmlFor="txtCardName" className='w-full'>Titular de la tarjeta:</label>
-            <InputPatch id='txtCardName' value='Manuel Gimenez Gutierrez' />
+            <div>
+              <label htmlFor="txtCardName" className='w-full'>{t("layout.menu.myProfile.labels.cardholder")}:</label>
+              <InputPatch id='txtCardName' value='Manuel Gimenez Gutierrez' />
 
-            <label htmlFor="txtBillingAddress" className='w-full'>Direccion de Facturacion:</label>
-            <InputPatch id='txtBillingAddress' value='Cº Ronaldi' isSensitive />
+              <label htmlFor="txtBillingAddress" className='w-full'>{t("layout.menu.myProfile.labels.facturation")}:</label>
+              <InputPatch id='txtBillingAddress' value='Cº Ronaldi' isSensitive />
 
-            <label htmlFor="txtCardNumber" className='w-full'>Numero de tarjeta:</label>
-            <InputPatch id='txtCardNumber' value='1233 2343 8978 3482' isSensitive />
-        
-            <label htmlFor="txtExpirationDate" className='w-full'>Fecha Expiracion:</label>
-            <InputPatch id='txtExpirationDate' value='03/29' type='month' isSensitive/>
-            
-            <label htmlFor="txtExpirationDate" className='w-52'>CVV:</label>
-            <InputPatch id='txtCvv' value='234' isSensitive />
+              <label htmlFor="txtCardNumber" className='w-full'>{t("layout.menu.myProfile.labels.cardnumber")}:</label>
+              <InputPatch id='txtCardNumber' value='1233 2343 8978 3482' isSensitive />
+          
+              <label htmlFor="txtExpirationDate" className='w-full'>{t("layout.menu.myProfile.labels.expiration")}:</label>
+              <InputPatch id='txtExpirationDate' value='03/29' type='month' isSensitive/>
+              
+              <label htmlFor="txtExpirationDate" className='w-52'>CVV:</label>
+              <InputPatch id='txtCvv' value='234' isSensitive />
+            </div>
 
           </div>
 

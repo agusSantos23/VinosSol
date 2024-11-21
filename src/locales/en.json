@@ -31,10 +31,74 @@
       "descOne": "Vermouth is an aromatized wine that is made from base wine to which herbs, spices and botanicals are added, giving it a distinctive flavor. It can come in dry or sweet versions, and its flavor profile varies depending on the ingredients used, such as wormwood and citrus.",
       "descTwo": "Its versatility makes it an excellent accompaniment to tapas and cheeses, and its bitterness makes it ideal for whetting your appetite before a meal. With a rich history and variety of styles, vermouth has gained a prominent place in cocktail culture."
     },
-
-
-
     "buttonBuy": "Buy"
-    
-  }
+  },
+  
+  "auth": {
+    "inputs":{
+      "email": "Email",
+      "username": "User Name",
+      "password": "Password",
+      "phoneNumber": "Phone Number",
+      "fullName": "Full Name",
+      "date": "Birthdate",
+      "treatment": "Accept the processing of my personal data received with it ",
+      "option": "Select an option",
+      "conditions": "Terms and Conditions",
+
+      "errors": {
+        "need": " is required",
+        "atLeastOne": "Must have at least ",
+        "atLeastTwo": " characters",
+        "terms": "You must accept the terms and conditions",
+        "case": "Must have upper and lower case",
+        "matches": "Passwords do not match"
+      }
+    },
+    "logIn": "Login",
+    "register": "Register",
+    "Signup": "Create Account"
+  },
+
+  "layout":{
+    "favoriteList": "Favorites List",
+    "cart": "Cart",
+    "profile": "My Profile",
+    "menu":{
+      "myProfile":{
+        "labels":{
+          "userName": "User Name",
+          "password": "Password",
+          "email": "Email",
+          "fullname": "Full Name",
+          "date": "Birthdate",
+          "phone": "Phone Number",
+          "home": "Home",
+          "Instructions": "Delivery Instructions",
+          "cardholder": "Card Holder",
+          "facturation": "Billing Address",
+          "cardnumber": "Card Number",
+          "expiration": "Expiration Date"
+        },
+        "sectionTitle":{
+          "personal": "Personal Information",
+          "delivery": "Data Delivery",
+          "bank": "Bank Data"
+        }
+      }
+    }
+  },
+
+  "footer":{
+      "title":{
+        "vine": "Grapes to Wine",
+        "ourWines": "Our Wines in Store",
+        "section": "Sections",
+        "privacy": "Privacy Policy",
+        "contact": "Contact",
+        "list": "Favorites List",
+        "cart": "Cart",
+        "profile": "My Profile"
+      }
+    }
 }

@@ -103,7 +103,7 @@ const Auth = () => {
                   onClick={(e) => handleSectionChange("register", e)}
                   className="w-56 px-4 py-1 bg-third text-lg text-secondary font-bold tracking-widest border-4 border-third rounded-md duration-300 ease-in-out hover:bg-selected hover:text-primary hover:border-selected"
                 >
-                  Register
+                  {t("auth.register")}
                 </button>
 
               </div>
@@ -120,7 +120,7 @@ const Auth = () => {
                   <>
                     <Input 
                       id="txtFullName" 
-                      placeholder={"Nombre completo"}
+                      placeholder={t("auth.inputs.fullName")}
                       register={register}
                       required={true}
                       minLength={2}
@@ -138,7 +138,7 @@ const Auth = () => {
 
                     <Input 
                       id="txtPhoneNumber" 
-                      placeholder={"Numero de telefono"}
+                      placeholder={t("auth.inputs.phoneNumber")}
                       register={register}
                       required={true}
                       minLength={9}
@@ -149,7 +149,7 @@ const Auth = () => {
                     <Input 
                       type='date'
                       id="txtBirthDate" 
-                      placeholder={"Fecha de nacimiento"}
+                      placeholder={t("auth.inputs.date")}
                       register={register}
                       required={true}
                       errors={errors}
@@ -199,13 +199,13 @@ const Auth = () => {
                           type="checkbox" 
                           id="acceptTerms" 
                           {...register("acceptTerms", {
-                            required: `Terminos y condiciones ${t("auth.inputs.errors.need")}`
+                            required: `${t("auth.inputs.conditions")} ${t("auth.inputs.errors.need")}`
                           },)} 
-                          className="mr-2"
+                          className="size-7 mr-2"
                         />
 
                         <label htmlFor="terms" className="text-sm text-gray-700">
-                          Acepto el tratamiento de mis datos personales de acuerdo con la <Link to="/termsconditions" className="text-blue-500 hover:text-selected">Politica de Privacidad</Link>
+                        {t("auth.inputs.treatment")} <Link to="/termsconditions" className="text-blue-500 hover:text-selected">{t("footer.title.privacy")}</Link>
                         </label>
                       </div>
 
@@ -259,7 +259,7 @@ const Auth = () => {
                   onClick={(e) => handleSectionChange("login", e)}
                   className="w-56 px-4 py-1 bg-third text-lg text-secondary font-bold tracking-widest border-4 border-third rounded-md duration-300 ease-in-out hover:bg-selected hover:text-primary hover:border-selected"
                 >
-                  Login
+                  {t("auth.logIn")}
                 </button>
 
               </div>
@@ -274,7 +274,7 @@ const Auth = () => {
 
           </>
         ) : (
-          <div>Selecciona una opción</div>
+          <div>{t("auth.inputs. option")}</div>
         )}
       </div>
     </main>
