@@ -14,14 +14,14 @@ const PrivacySection = ({title, children}) => {
   return (
     
     <section>
-      <header onClick={handleBreakDown} className="w-max flex justify-start items-center">
+      <header onClick={handleBreakDown} className="w-max flex justify-start items-center cursor-pointer">
         <h2 className="text-2xl font-bold font-lora">{title}</h2>
 
         <svg 
           width="1em" 
           height="1em" 
           viewBox="0 0 24 24"
-          className="size-8"
+          className={`size-8 ${breakDown && "rotate-180"}   duration-200 ease-in`}
         >
           <path 
           fill="none" 
@@ -35,7 +35,7 @@ const PrivacySection = ({title, children}) => {
 
       </header>
 
-      <div className={`${!breakDown && "hidden"}`}>
+      <div className={`${breakDown ? "max-h-screen" : "max-h-0"} overflow-hidden transition-all duration-300 ease-in-out`}>
         {children}
       </div>
     </section>
